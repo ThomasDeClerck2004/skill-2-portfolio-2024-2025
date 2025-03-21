@@ -17,6 +17,13 @@ export default function Header() {
                     </NavLink>
 
                     <NavLink 
+                        to="/achievements" 
+                        className={({ isActive }) => isActive ? "text-red-600" : "text-gray-600 hover:text-gray-900"}
+                    >
+                        Achievements
+                    </NavLink>
+
+                    <NavLink 
                         to="/about" 
                         className={({ isActive }) => isActive ? "text-red-600" : "text-gray-600 hover:text-gray-900"}
                     >

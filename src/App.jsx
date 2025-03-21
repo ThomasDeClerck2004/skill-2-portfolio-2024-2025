@@ -8,6 +8,7 @@ import Footer from './components/footer'
 // Pages
 import Home from './pages/home'
 import About from './pages/about'
+import Achievements from './pages/achievements'
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
       <Header />
       
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/about' element={<About/>} />
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/achievements' element={<Achievements />} />
       </Routes>
 
       <Footer />
