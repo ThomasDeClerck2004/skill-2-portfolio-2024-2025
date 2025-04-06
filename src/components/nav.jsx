@@ -5,18 +5,27 @@ import phoneIcon from "../assets/phoneIcon.png";
 import closeIcon from "../assets/closeIcon.png";
 
 export default function Nav() {
-    const location = useLocation();
-    const isHashActive = (hash) => location.hash === hash;
-
     const [toggle, setToggle] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
+    useEffect(() => {
+        const handleScroll = () => {
+          setScrolled(window.scrollY > 10);
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+    
     return (
-        <nav className="w-full flex items-center py-5 fixed top-0 z-20 bg-[#131313] text-white p-4 shadow-md">
+        <nav className={`w-full flex items-center py-5 fixed top-0 z-20 text-white p-4 shadow-md transition-all duration-300 ${
+            scrolled ? 'bg-[#131313] backdrop-blur-md' : 'bg-transparent'
+        }`}>
             <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
                 <NavLink
                     to="/"
                     className="flex items-center gap-2"
-                    onClick={() => window.scrollTo(0, 0)}
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth', offset: -80 })}
                 >
                     <img src={logo} alt="Logo" className="w-12 h-12 object-contain" />
                     <h1 className="text-lg font-bold text-gray-400">
@@ -26,29 +35,39 @@ export default function Nav() {
                 </NavLink>
                 
                 <ul className="list-none hidden sm:flex flex-row gap-10 text-lg font-semibold">
-                    <NavLink 
-                        to="/#about" 
-                        className={() =>
-                            isHashActive('#about') ? 'text-gray-400' : 'text-[#009b5f] hover:text-gray-300'
+                    <NavLink
+                        to="/about"
+                        className={({ isActive }) =>
+                            `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                         }
-                    >
+                        onClick={() => {
+                            document.getElementById("about")?.scrollIntoView({ behavior: "smooth", offset: -80 });
+                        }}
+                        >
                         About
                     </NavLink>
 
+
                     <NavLink 
-                        to="/#work" 
-                        className={() =>
-                            isHashActive('#work') ? 'text-gray-400' : 'text-[#009b5f] hover:text-gray-300'
+                        to="/work" 
+                        className={({ isActive }) =>
+                            `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                         }
+                        onClick={() => {
+                            document.getElementById("about")?.scrollIntoView({ behavior: "smooth", offset: -80 });
+                        }}
                     >
                         Work
                     </NavLink>
 
                     <NavLink 
-                        to="/#contact" 
-                        className={() =>
-                            isHashActive('#contact') ? 'text-gray-400' : 'text-[#009b5f] hover:text-gray-300'
+                        to="/contact" 
+                        className={({ isActive }) =>
+                            `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                         }
+                        onClick={() => {
+                            document.getElementById("about")?.scrollIntoView({ behavior: "smooth", offset: -80 });
+                        }}
                     >
                         Contact
                     </NavLink>
@@ -67,39 +86,37 @@ export default function Nav() {
                     >
                         <ul className="list-none flex flex-col gap-4 text-lg font-semibold">
                             <NavLink
-                                to="/#about"
-                                className={() =>
-                                    isHashActive('#about') ? 'text-gray-400' : 'text-[#009b5f] hover:text-gray-300'
+                                to="/about"
+                                className={({ isActive }) =>
+                                    `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                                 }
                                 onClick={() => {
-                                    setToggle(false);
-                                    window.scrollTo(0, 0);
+                                    document.getElementById("about")?.scrollIntoView({ behavior: "smooth", offset: -80 });
                                 }}
-                            >
+                                >
                                 About
                             </NavLink>
 
-                            <NavLink
-                                to="/#work"
-                                className={() =>
-                                    isHashActive('#work') ? 'text-gray-400' : 'text-[#009b5f] hover:text-gray-300'
+
+                            <NavLink 
+                                to="/work" 
+                                className={({ isActive }) =>
+                                    `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                                 }
                                 onClick={() => {
-                                    setToggle(false);
-                                    window.scrollTo(0, 0);
+                                    document.getElementById("about")?.scrollIntoView({ behavior: "smooth", offset: -80 });
                                 }}
                             >
                                 Work
                             </NavLink>
 
-                            <NavLink
-                                to="/#contact"
-                                className={() =>
-                                    isHashActive('#contact') ? 'text-gray-400' : 'text-[#009b5f] hover:text-gray-300'
+                            <NavLink 
+                                to="/contact" 
+                                className={({ isActive }) =>
+                                    `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                                 }
                                 onClick={() => {
-                                    setToggle(false);
-                                    window.scrollTo(0, 0);
+                                    document.getElementById("about")?.scrollIntoView({ behavior: "smooth", offset: -80 });
                                 }}
                             >
                                 Contact

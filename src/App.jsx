@@ -1,4 +1,4 @@
-import { BrowserRouter, NavLink } from "react-router-dom";
+import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 import "tailwindcss";
 
 // Page sections

@@ -1,6 +1,6 @@
 export default function Work() {
     return (
-        <div>
+        <div id="work">
             Work
         </div>
     )
