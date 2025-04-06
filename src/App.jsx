@@ -1,28 +1,24 @@
-import { Route, Routes } from 'react-router-dom'
-import './App.css'
+import { BrowserRouter, NavLink } from "react-router-dom";
+import "tailwindcss";
 
 // Page sections
-import Header from './components/header'
-import Footer from './components/footer'
-
-// Pages
-import Home from './pages/home'
-import About from './pages/about'
-import Achievements from './pages/achievements'
+import { Nav, Footer, Hero, About, Work, Contact } from "./components";
 
 function App() {
   return (
-    <>
-      <Header />
-      
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/achievements' element={<Achievements />} />
-      </Routes>
-
-      <Footer />
-    </>
+    <BrowserRouter>
+      <div className="relative z-0 bg-[#131313]">
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+          <Nav />
+          <Hero />
+        </div>
+        <About />
+        <Work />
+        <div className="relative z-0">
+          <Contact />
+        </div>
+      </div>
+    </BrowserRouter>
   )
 }
 
