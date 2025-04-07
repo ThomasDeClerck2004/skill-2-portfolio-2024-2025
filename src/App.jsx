@@ -1,5 +1,5 @@
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
-import "tailwindcss";
+import './index.css';
 
 // Page sections
 import { Nav, Footer, Hero, About, Work, Contact } from "./components";

@@ -9,7 +9,7 @@ export default function Earth() {
     // Rotate the Earth slowly
     useFrame(() => {
         if (earthRef.current) {
-            earthRef.current.rotation.y += 0.01; 
+            earthRef.current.rotation.y += 0.005; 
         }
     });
     

@@ -1,11 +1,14 @@
 import { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Earth from '../components/earth.jsx';
 
 export default function Contact() {
     const formRef = useRef();
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true });
+
     const [form, setForm] = useState({
         name: '',
         email: '',
@@ -37,13 +40,17 @@ export default function Contact() {
     };
 
     return (
-        <div id="contact" className="flex justify-center items-center bg-black-100 overflow-hidden">
+        <section
+            id="contact"
+            ref={sectionRef}
+            className="flex justify-center items-center bg-black-100 overflow-hidden"
+        >
             <div className="container mx-auto px-4 xl:px-20 py-12 flex flex-col-reverse xl:flex-row gap-10 rounded-2xl shadow-lg">
                 {/* Contact Form */}
                 <motion.div
                     variants={slideIn('left', 'tween', 0.2, 1)}
                     initial="hidden"
-                    animate="show"
+                    animate={isInView ? 'show' : 'hidden'}
                     className="flex-[0.75] bg-[#131313] p-8 rounded-2xl"
                 >
                     <div className="rounded-2xl bg-[#131313]">
@@ -102,12 +109,12 @@ export default function Contact() {
                 <motion.div
                     variants={slideIn('right', 'tween', 0.2, 1)}
                     initial="hidden"
-                    animate="show"
+                    animate={isInView ? 'show' : 'hidden'}
                     className="flex-1 xl:h-[700px] h-[350px] w-full"
                 >
-                    <Canvas camera={{ position: [5, 5, 5], fov: 50 }}>
-                        <ambientLight intensity={1} />
-                        <directionalLight position={[10, 10, 5]} intensity={4.5} />
+                    <Canvas camera={{ position: [-4, 3, 6], fov: 45, near: 0.1, far: 200 }}>
+                        <ambientLight intensity={2} />
+                        <directionalLight position={[100, 10, 5]} intensity={4.5} />
                         <Earth />
                         <OrbitControls
                             enableZoom={false}
@@ -118,6 +125,6 @@ export default function Contact() {
                     </Canvas>
                 </motion.div>
             </div>
-        </div>
+        </section>
     );
 }

@@ -18,7 +18,7 @@ export default function Nav() {
     }, []);
     
     return (
-        <nav className={`w-full flex items-center py-5 fixed top-0 z-20 text-white p-4 shadow-md transition-all duration-300 ${
+        <nav className={`w-full flex items-center py-5 fixed top-0 z-20 text-white p-4 shadow-lg transition-all duration-300 ${
             scrolled ? 'bg-[#131313] backdrop-blur-md' : 'bg-transparent'
         }`}>
             <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
@@ -41,12 +41,14 @@ export default function Nav() {
                             `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                         }
                         onClick={() => {
-                            document.getElementById("about")?.scrollIntoView({ behavior: "smooth", offset: -80 });
+                            const section = document.getElementById("about");
+                            const offset = 80; // Height of your fixed navigation bar
+                            const top = section?.getBoundingClientRect().top + window.scrollY - offset;
+                            window.scrollTo({ top, behavior: "smooth" });
                         }}
-                        >
+                    >
                         About
                     </NavLink>
-
 
                     <NavLink 
                         to="/work" 
@@ -54,7 +56,10 @@ export default function Nav() {
                             `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                         }
                         onClick={() => {
-                            document.getElementById("about")?.scrollIntoView({ behavior: "smooth", offset: -80 });
+                            const section = document.getElementById("work");
+                            const offset = 80; // Height of your fixed navigation bar
+                            const top = section?.getBoundingClientRect().top + window.scrollY - offset;
+                            window.scrollTo({ top, behavior: "smooth" });
                         }}
                     >
                         Work
@@ -66,7 +71,10 @@ export default function Nav() {
                             `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                         }
                         onClick={() => {
-                            document.getElementById("about")?.scrollIntoView({ behavior: "smooth", offset: -100 });
+                            const section = document.getElementById("contact");
+                            const offset = 80; // Height of your fixed navigation bar
+                            const top = section?.getBoundingClientRect().top + window.scrollY - offset;
+                            window.scrollTo({ top, behavior: "smooth" });
                         }}
                     >
                         Contact
@@ -91,12 +99,14 @@ export default function Nav() {
                                     `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                                 }
                                 onClick={() => {
-                                    document.getElementById("about")?.scrollIntoView({ behavior: "smooth", offset: -80 });
+                                    const section = document.getElementById("about");
+                                    const offset = 80; // Height of your fixed navigation bar
+                                    const top = section?.getBoundingClientRect().top + window.scrollY - offset;
+                                    window.scrollTo({ top, behavior: "smooth" });
                                 }}
-                                >
+                            >
                                 About
                             </NavLink>
-
 
                             <NavLink 
                                 to="/work" 
@@ -104,7 +114,10 @@ export default function Nav() {
                                     `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                                 }
                                 onClick={() => {
-                                    document.getElementById("about")?.scrollIntoView({ behavior: "smooth", offset: -80 });
+                                    const section = document.getElementById("work");
+                                    const offset = 80; // Height of your fixed navigation bar
+                                    const top = section?.getBoundingClientRect().top + window.scrollY - offset;
+                                    window.scrollTo({ top, behavior: "smooth" });
                                 }}
                             >
                                 Work
@@ -116,7 +129,10 @@ export default function Nav() {
                                     `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                                 }
                                 onClick={() => {
-                                    document.getElementById("about")?.scrollIntoView({ behavior: "smooth", offset: -80 });
+                                    const section = document.getElementById("contact");
+                                    const offset = 80; // Height of your fixed navigation bar
+                                    const top = section?.getBoundingClientRect().top + window.scrollY - offset;
+                                    window.scrollTo({ top, behavior: "smooth" });
                                 }}
                             >
                                 Contact
