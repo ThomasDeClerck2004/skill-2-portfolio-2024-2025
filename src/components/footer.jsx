@@ -1,12 +1,12 @@
 export default function Footer() {
     return (
-        <div className="flex flex-col min-h-screen">
-            <div className="flex-grow"></div>
-            <footer className="bg-blue-600 text-white p-4">
-                <div className="container mx-auto">
-                    <p className="text-center">© 2025 My Website</p>
-                </div>
-            </footer>
-        </div>
+        <footer className="text-white p-4">
+            <div className="container mx-auto">
+                <hr className="text-[#009b5f] p-1" />
+                <p className="text-center text-gray-400 text-sm">
+                  © 2025 Thomas De Clerck. All rights reserved.
+                </p>
+            </div>
+        </footer>
     );
 }

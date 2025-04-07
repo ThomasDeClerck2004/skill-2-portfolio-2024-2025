@@ -9,11 +9,9 @@ export default function Earth() {
     // Rotate the Earth slowly
     useFrame(() => {
         if (earthRef.current) {
-            earthRef.current.rotation.y += 0.002; // Adjust speed as needed
+            earthRef.current.rotation.y += 0.01; 
         }
     });
-
-    return (
-        <primitive ref={earthRef} object={scene} scale={0.002} position={[0, 0, 0]} />
-    );
+    
+    return <primitive ref={earthRef} object={scene} scale={0.002} position={[0, 0, 0]} />;
 }

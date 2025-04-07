@@ -10,13 +10,12 @@ function App() {
       <div className="relative z-0 bg-[#000301]">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Nav />
-          <Hero />
+            <Hero />
         </div>
-        <About />
-        <Work />
-        <div className="relative z-0">
-          <Contact />
-        </div>
+            <About />
+            <Work />
+            <Contact />
+        <Footer />
       </div>
     </BrowserRouter>
   )

@@ -66,7 +66,7 @@ export default function Nav() {
                             `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                         }
                         onClick={() => {
-                            document.getElementById("about")?.scrollIntoView({ behavior: "smooth", offset: -80 });
+                            document.getElementById("about")?.scrollIntoView({ behavior: "smooth", offset: -100 });
                         }}
                     >
                         Contact
