@@ -37,7 +37,7 @@ export default function Contact() {
                     className="flex-[0.75] bg-[#131313] p-8 rounded-2xl"
                 >
                     <div className="rounded-2xl bg-[#131313]">
-                        <p className="text-gray-300 pb-2">Get in touch</p>
+                        <p className="text-gray-300 pb-2">GET IN TOUCH</p>
                         <h3 className="text-white font-bold text-6xl">Contact.</h3>
     
                         <form
@@ -93,7 +93,7 @@ export default function Contact() {
                     variants={slideIn('right', 'tween', 0.2, 1)}
                     initial="hidden"
                     animate={isInView ? 'show' : 'hidden'}
-                    className="flex-1 xl:h-[700px] h-[350px] w-full"
+                    className="flex-1 w-full aspect-[16/9] sm:aspect-[4/3]"
                 >
                     <Canvas camera={{ position: [-4, 3, 6], fov: 45, near: 0.1, far: 200 }}>
                         {/* Ambient light for general illumination */}
