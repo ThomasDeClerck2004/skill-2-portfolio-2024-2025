@@ -1,6 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Link } from 'react-scroll';
 
 export default function Hero() {
     return (
