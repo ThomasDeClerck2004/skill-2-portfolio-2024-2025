@@ -27,7 +27,7 @@ export default function Hero() {
                 animate={isInView ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
             >
-                I am a passionate developer.
+                Breaking things and fixing them (on purpose, usually).
             </motion.p>
         </section>
     );

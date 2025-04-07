@@ -3,6 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Earth from '../components/earth.jsx';
+import { slideIn } from '../utils/animations';
 
 export default function Contact() {
     const formRef = useRef();
@@ -20,24 +21,6 @@ export default function Contact() {
     const handleChange = (e) => {}
 
     const handleSubmit = (e) => {}
-
-    const slideIn = (direction, type, delay, duration) => {
-        return {
-            hidden: {
-                x: direction === 'left' ? '-100%' : '100%',
-                opacity: 0,
-            },
-            show: {
-                x: 0,
-                opacity: 1,
-                transition: {
-                    type: type,
-                    delay: delay,
-                    duration: duration,
-                },
-            },
-        };
-    };
 
     return (
         <section
@@ -113,9 +96,30 @@ export default function Contact() {
                     className="flex-1 xl:h-[700px] h-[350px] w-full"
                 >
                     <Canvas camera={{ position: [-4, 3, 6], fov: 45, near: 0.1, far: 200 }}>
-                        <ambientLight intensity={2} />
-                        <directionalLight position={[100, 10, 5]} intensity={4.5} />
+                        {/* Ambient light for general illumination */}
+                        <ambientLight intensity={2.5} />
+
+                        {/* Directional light to simulate sunlight */}
+                        <directionalLight
+                            position={[5, 5, 5]} // Position of the "Sun"
+                            intensity={3} // Increase brightness
+                            castShadow // Enable shadows
+                            shadow-mapSize-width={2048} // Higher shadow quality
+                            shadow-mapSize-height={2048}
+                            shadow-camera-far={50}
+                            shadow-camera-left={-10}
+                            shadow-camera-right={10}
+                            shadow-camera-top={10}
+                            shadow-camera-bottom={-10}
+                        />
+
+                        {/* Point light for additional brightness */}
+                        <pointLight position={[10, 10, 10]} intensity={2} />
+
+                        {/* Earth model */}
                         <Earth />
+
+                        {/* Orbit controls for interaction */}
                         <OrbitControls
                             enableZoom={false}
                             enablePan={false}
