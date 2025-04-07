@@ -1,7 +1,7 @@
 export default function Work() {
     return (
         <div id="work">
-            Work
+            work
         </div>
-    )
+    );
 }
