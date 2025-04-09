@@ -10,7 +10,7 @@ export default function About() {
 
     return (
         <section id="about" ref={sectionRef} className="flex justify-center items-center bg-[#000301] overflow-hidden">
-            <div className="container mx-auto px-4 xl:px-20 py-12">
+            <div className="container mx-auto px-4 xl:px-20 pt-12">
                 <motion.div
                     variants={slideIn('left', 'tween', 0.2, 1)}
                     initial="hidden"
@@ -70,15 +70,15 @@ export default function About() {
                         <div className='flex flex-col mt-4 text-white'>
                             <div className='flex flex-row items-center gap-1 mb-3'>
                                 <img src="/src/assets/gmail.png" alt="about" className="w-6 h-6 mr-2" />
-                                <p>Email: <a href='mailto:thomas.de.clerck4@gmail.com' className='underline underline-offset-4 decoration-[#009b5f]'>thomas.de.clerck4@gmail.com</a></p>
+                                <p>Email: <a href='mailto:thomas.de.clerck4@gmail.com' className='underline underline-offset-4 decoration-[#009b5f] hover:text-[#009b5f]'>thomas.de.clerck4@gmail.com</a></p>
                             </div>
                             <div className='flex flex-row items-center gap-1 mb-3'>
                                 <img src="/src/assets/github.png" alt="about" className="w-6 h-6 mr-2" />
-                                <p>Github: <a href='https://github.com/ThomasDeClerck2004' target='_blank' className='underline underline-offset-4 decoration-[#009b5f]'>ThomasDeClerck2004</a> & <a href='https://github.com/Thomas997' target='_blank' className='underline underline-offset-4 decoration-[#009b5f]'>Thomas997</a></p>
+                                <p>Github: <a href='https://github.com/ThomasDeClerck2004' target='_blank' className='underline underline-offset-4 decoration-[#009b5f] hover:text-[#009b5f]'>ThomasDeClerck2004</a> & <a href='https://github.com/Thomas997' target='_blank' className='underline underline-offset-4 decoration-[#009b5f] hover:text-[#009b5f]'>Thomas997</a></p>
                             </div>
                             <div className='flex flex-row items-center gap-1 mb-3'>
                                 <img src="/src/assets/linkedin.png" alt="about" className="w-6 h-6 mr-2" />
-                                <p>LinkedIn: <a href='https://www.linkedin.com/in/thomas-de-clerck-b9162b2a2/' target='_blank' className='underline underline-offset-4 decoration-[#009b5f]'>thomas-de-clerck</a></p>
+                                <p>LinkedIn: <a href='https://www.linkedin.com/in/thomas-de-clerck-b9162b2a2/' target='_blank' className='underline underline-offset-4 decoration-[#009b5f] hover:text-[#009b5f]'>thomas-de-clerck</a></p>
                             </div>
                         </div>
 

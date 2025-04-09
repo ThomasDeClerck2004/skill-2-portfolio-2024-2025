@@ -97,11 +97,11 @@ export default function Contact() {
                 >
                     <Canvas camera={{ position: [-4, 3, 6], fov: 45, near: 0.1, far: 200 }}>
                         {/* Ambient light for general illumination */}
-                        <ambientLight intensity={2.5} />
+                        <ambientLight intensity={4.5} />
 
                         {/* Directional light to simulate sunlight */}
                         <directionalLight
-                            position={[5, 5, 5]} // Position of the "Sun"
+                            position={[10, 5, 10]} // Position of the "Sun"
                             intensity={3} // Increase brightness
                             castShadow // Enable shadows
                             shadow-mapSize-width={2048} // Higher shadow quality

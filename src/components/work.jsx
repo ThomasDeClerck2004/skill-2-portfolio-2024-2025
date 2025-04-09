@@ -1,19 +1,59 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
 
 export default function Work() {
-    return (
-        <section id="work" className="flex justify-center items-center bg-[#000301] overflow-hidden">
-            <div className="container mx-auto px-4 xl:px-20 py-12">
-                <p className="text-gray-300 pb-2 text-xs sm:text-lg sm:text-left text-center">MY WORK</p>
-                <h3 className="text-white font-bold text-3xl sm:text-6xl sm:text-left text-center">Projects.</h3>
+    const projects = [
+        { name: "Project 1", description: "Description for Project 1." },
+        { name: "Project 2", description: "Description for Project 2." },
+        { name: "Project 3", description: "Description for Project 3." },
+        { name: "Project 4", description: "Description for Project 4." },
+    ];
 
-                <div className="flex flex-col lg:flex-row flex-wrap py-12 gap-20 justify-center items-center text-gray-300">
-                    {["Project 1", "Project 2", "Project 3", "Project 4"].map((project, index) => (
+    const containerVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+    };
+
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true });
+
+    return (
+        <section
+            id="work"
+            ref={sectionRef}
+            className="flex justify-center items-center bg-[#000301] overflow-hidden"
+        >
+            <div className="container mx-auto px-4 xl:px-20 py-12">
+                <motion.p
+                    className="text-gray-300 pb-2 text-xs sm:text-lg sm:text-left text-center"
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    variants={containerVariants}
+                >
+                    MY WORK
+                </motion.p>
+                <motion.h3
+                    className="text-white font-bold text-3xl sm:text-6xl sm:text-left text-center"
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    variants={containerVariants}
+                >
+                    Projects.
+                </motion.h3>
+
+                <motion.div
+                    className="flex flex-col lg:flex-row flex-wrap py-12 gap-13 justify-center items-center text-gray-300"
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                    transition={{ staggerChildren: 0.2 }}
+                >
+                    {projects.map((project, index) => (
                         <Tilt
                             key={index}
-                            className="rounded-2xl shadow-lg"
+                            className="shadow-lg"
                             tiltMaxAngleX={15}
                             tiltMaxAngleY={15}
                             perspective={1000}
@@ -21,20 +61,24 @@ export default function Work() {
                             transitionSpeed={400}
                         >
                             <motion.div
-                                className="bg-gradient-to-br from-[#009b5f] to-[#01b872] border-4 border-transparent rounded-2xl shadow-lg shadow-primary p-6 w-[300px] h-[400px] flex flex-col items-center justify-center"
+                                className="bg-gradient-to-br from-[#00221556] to-[#00ff9d] border-4 border-black rounded-2xl shadow-lg shadow-primary p-6 w-[300px] h-[400px] cursor-pointer"
                                 whileHover={{ scale: 1.05 }}
-                                transition={{ duration: 0.3 }}
+                                initial="hidden"
+                                animate={isInView ? "visible" : "hidden"}
+                                transition={{ duration: 0.5, delay: index * 0.3 }}
+                                variants={containerVariants}
                             >
                                 <img
                                     src="/src/assets/placeholder.png"
-                                    alt={project}
+                                    alt={project.name}
                                     className="w-full h-2/3 object-cover rounded-lg mb-4"
                                 />
-                                <h4 className="text-white font-bold text-xl">{project}</h4>
+                                <h4 className="text-white font-bold text-xl">{project.name}</h4>
+                                <p className="text-gray-300 mt-2">{project.description}</p>
                             </motion.div>
                         </Tilt>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
