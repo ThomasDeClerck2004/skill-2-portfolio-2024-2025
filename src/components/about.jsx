@@ -58,31 +58,31 @@ export default function About() {
                         animate={isInView ? 'show' : 'hidden'}
                     >
                         <h2 className="text-gray-300 font-bold text-3xl lg:text-4xl">
-                            Hi, I'm <span className="text-[#009b5f]">Thomas</span>
+                            Hello, I'm <span className="text-[#009b5f]">Thomas</span>
                         </h2>
                         <p className="text-gray-300 font-bold text-xl lg:text-2xl pt-4">
-                            Lorem Ipsum is simply dummy text of the printing and <span className='underline decoration-[#009b5f] underline-offset-6'>typesetting</span> typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                            a galley of type and scrambled it to make a type specimen book. It has survived not only
-                            five centuries, but also the leap into electronic typesetting, remaining essentially
-                            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-                            PageMaker including versions of Lorem Ipsum.
+                          I am a enthusiastic 20-year-old IT developer currently studying at Thomas More in Geel, Belgium. 
+                          My love for technology and creative design drives me to build modern, responsive websites using the latest frameworks and tools. 
+                          Ever since high school, I’ve been fascinated by how digital systems work and have constantly sought to expand my knowledge. 
+                          I’m highly motivated, eager to learn, and always open to discovering new technologies. With a strong eye for detail, I enjoy working with others and want to keep improving my skills by building useful and well-designed digital products.
                         </p>
 
-                        <div className='flex flex-col mt-8 text-white'>
-                            <a>
-                                Email
-                            </a>
-                            <a>
-                                Github
-                            </a>
-                            <a>
-                                Linkedin
-                            </a>
+                        <div className='flex flex-col mt-4 text-white'>
+                            <div className='flex flex-row items-center gap-1 mb-3'>
+                                <img src="/src/assets/gmail.png" alt="about" className="w-6 h-6 mr-2" />
+                                <p>Email: <a href='mailto:thomas.de.clerck4@gmail.com' className='underline underline-offset-4 decoration-[#009b5f]'>thomas.de.clerck4@gmail.com</a></p>
+                            </div>
+                            <div className='flex flex-row items-center gap-1 mb-3'>
+                                <img src="/src/assets/github.png" alt="about" className="w-6 h-6 mr-2" />
+                                <p>Github: <a href='https://github.com/ThomasDeClerck2004' target='_blank' className='underline underline-offset-4 decoration-[#009b5f]'>ThomasDeClerck2004</a> & <a href='https://github.com/Thomas997' target='_blank' className='underline underline-offset-4 decoration-[#009b5f]'>Thomas997</a></p>
+                            </div>
+                            <div className='flex flex-row items-center gap-1 mb-3'>
+                                <img src="/src/assets/linkedin.png" alt="about" className="w-6 h-6 mr-2" />
+                                <p>LinkedIn: <a href='https://www.linkedin.com/in/thomas-de-clerck-b9162b2a2/' target='_blank' className='underline underline-offset-4 decoration-[#009b5f]'>thomas-de-clerck</a></p>
+                            </div>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mt-8">
+                        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mt-3">
                             <a
                                 href="/src/assets/CV-L-2025-EN.pdf"
                                 target="_blank"
@@ -103,7 +103,7 @@ export default function About() {
                     </motion.div>
                 </div>
 
-                <div className="py-6">
+                <div>
                     <motion.div className='flex flex-col'
                         variants={slideIn('left', 'tween', 0.2, 1)}
                         initial="hidden"
