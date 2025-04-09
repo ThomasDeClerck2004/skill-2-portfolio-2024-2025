@@ -6,3 +6,5 @@ export { default as Work } from "./work";
 export { default as Contact } from "./contact";
 export { default as Experience } from "./experience";
 export { default as Skill } from "./skill";
+export { default as Skills } from "./skills";
+export { default as Project } from "./project";

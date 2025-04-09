@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import Tilt from 'react-parallax-tilt'; // Import Tilt
+import Tilt from 'react-parallax-tilt';
 import { slideIn } from '../utils/animations';
 import { Skill } from "../components";
 
@@ -20,7 +20,7 @@ export default function About() {
                     <h3 className="text-white font-bold text-3xl sm:text-6xl sm:text-left text-center">About me.</h3>
                 </motion.div>
 
-                <div className="flex flex-col lg:flex-row py-12 gap-10">
+                <div className="flex flex-col lg:flex-row py-10 gap-10">
                     {/* Image Section */}
                     <motion.div
                         className="hidden xl:block xl:rounded-md xl:w-[3000px] xl:h-[500px] xl:shadow-lg xl:shadow-primary"
@@ -57,10 +57,10 @@ export default function About() {
                         initial="hidden"
                         animate={isInView ? 'show' : 'hidden'}
                     >
-                        <h2 className="text-gray-300 font-bold text-3xl lg:text-4xl">
+                        <h2 className="text-gray-300 font-bold text-3xl lg:text-4xl sm:text-left text-center">
                             Hello, I'm <span className="text-[#009b5f]">Thomas</span>
                         </h2>
-                        <p className="text-gray-300 font-bold text-xl lg:text-2xl pt-4">
+                        <p className="text-gray-300 font-bold text-xl lg:text-2xl pt-4 sm:text-left text-center">
                           I am a enthusiastic 20-year-old IT developer currently studying at Thomas More in Geel, Belgium. 
                           My love for technology and creative design drives me to build modern, responsive websites using the latest frameworks and tools. 
                           Ever since high school, I’ve been fascinated by how digital systems work and have constantly sought to expand my knowledge. 
@@ -104,53 +104,25 @@ export default function About() {
                 </div>
 
                 <div>
-                    <motion.div className='flex flex-col'
+                    <motion.div className='flex flex-col mb-6'
                         variants={slideIn('left', 'tween', 0.2, 1)}
                         initial="hidden"
                         animate={isInView ? 'show' : 'hidden'}
                     >
-                        <h2 className="text-gray-300 font-bold text-3xl lg:text-4xl mb-5 pb-1 border-l-4 border-[#009b5f] pl-4">
-                            My Skills
+                        <h2 className="text-gray-300 font-bold text-3xl lg:text-4xl mb-3 pb-1 border-l-4 border-[#009b5f] pl-4">
+                            My Hobbies
                         </h2>
 
                         <div className='lg:ml-5'>
-                            <h3 className="text-gray-300 font-bold text-xl lg:text-2xl">Programming Languages</h3>
-                            <motion.div className='flex flex-row flex-wrap gap-4 pt-3 pb-5'
-                                variants={slideIn('left', 'tween', 0.6, 1)}
+                            <motion.div className='flex flex-row flex-wrap gap-4 pb-5'
+                                variants={slideIn('left', 'tween', 0.2, 1)}
                                 initial="hidden"
                                 animate={isInView ? 'show' : 'hidden'}
                             >
-                                <Skill skillName="Python" />
-                                <Skill skillName="Java" />
-                                <Skill skillName="C#" />
-                                <Skill skillName="JavaScript" />
-                                <Skill skillName="SQL" />
-                                <Skill skillName="HTML" />
-                                <Skill skillName="CSS" />
-                            </motion.div>
-
-                            <h3 className="text-gray-300 font-bold text-xl lg:text-2xl">Frameworks & Libraries</h3>
-                            <motion.div className='flex flex-row flex-wrap gap-4 pt-3 pb-5'
-                                variants={slideIn('left', 'tween', 0.8, 1)}
-                                initial="hidden"
-                                animate={isInView ? 'show' : 'hidden'}
-                            >
-                                <Skill skillName="React" />
-                                <Skill skillName=".NET" />
-                                <Skill skillName="Tailwind CSS" />
-                                <Skill skillName="Alpine.js" />
-                                <Skill skillName="Laravel" />
-                                <Skill skillName="Livewire" />
-                            </motion.div>
-
-                            <h3 className="text-gray-300 font-bold text-xl lg:text-2xl">Tools & Platforms</h3>
-                            <motion.div className='flex flex-row flex-wrap gap-4 pt-3 pb-5'
-                                variants={slideIn('left', 'tween', 1.0, 1)}
-                                initial="hidden"
-                                animate={isInView ? 'show' : 'hidden'}
-                            >
-                                <Skill skillName="Docker" />
-                                <Skill skillName="Linux" />
+                                <Skill skillName="Fitness" />
+                                <Skill skillName="Walking" />
+                                <Skill skillName="Tennis" />
+                                <Skill skillName="Gaming" />
                             </motion.div>
                         </div>
                     </motion.div>

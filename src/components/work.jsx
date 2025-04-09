@@ -4,10 +4,12 @@ import Tilt from 'react-parallax-tilt';
 
 export default function Work() {
     const projects = [
-        { name: "Project 1", description: "Description for Project 1." },
-        { name: "Project 2", description: "Description for Project 2." },
-        { name: "Project 3", description: "Description for Project 3." },
-        { name: "Project 4", description: "Description for Project 4." },
+        { name: "Donkey kong", description: "Description for Project 1." },
+        { name: "Filmvault", description: "Description for Project 2." },
+        { name: "Skil-2 Project", description: "Description for Project 3." },
+        { name: "IOT-bridge", description: "Description for Project 4." },
+        { name: "Brussels brews", description: "Description for Project 4." },
+        { name: "My personal portfolio", description: "Description for Project 4." },
     ];
 
     const containerVariants = {
@@ -61,7 +63,7 @@ export default function Work() {
                             transitionSpeed={400}
                         >
                             <motion.div
-                                className="bg-gradient-to-br from-[#00221556] to-[#00ff9d] border-4 border-black rounded-2xl shadow-lg shadow-primary p-6 w-[300px] h-[400px] cursor-pointer"
+                                className="bg-gradient-to-br from-[#00221556] to-[#399b75] border-4 border-black rounded-2xl shadow-lg shadow-primary p-6 w-[300px] h-[400px] cursor-pointer"
                                 whileHover={{ scale: 1.05 }}
                                 initial="hidden"
                                 animate={isInView ? "visible" : "hidden"}

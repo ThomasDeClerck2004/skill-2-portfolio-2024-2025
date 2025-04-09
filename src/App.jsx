@@ -4,6 +4,7 @@ import './index.css';
 // Page sections
 import { Nav, Footer } from "./components";
 import IndexPage from "./pages/indexPage";
+import ProjectPage from "./pages/projectPage";
 
 function Main() {
 	return (
@@ -12,6 +13,7 @@ function Main() {
       <Route path={'/about'} element={<IndexPage />} />
       <Route path={'/work'} element={<IndexPage />} />
       <Route path={'/contact'} element={<IndexPage />} />
+      <Route path={'/projects'} element={<ProjectPage />} />
     </Routes>
 	);
 }
