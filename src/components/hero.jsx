@@ -13,19 +13,19 @@ export default function Hero() {
             <div className="absolute inset-0 bg-hero-pattern bg-cover bg-no-repeat bg-center opacity-50"></div>
 
             <motion.h1
-                className="text-3xl lg:text-5xl font-bold text-white z-10"
+                className="text-3xl lg:text-5xl font-bold text-white z-10 will-change-transform"
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 1, ease: 'easeOut' }}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
             >
                 Welcome to My Portfolio
             </motion.h1>
 
             <motion.p
-                className="mt-4 text-xs lg:text-lg text-gray-300 z-10"
+                className="mt-4 text-xs lg:text-lg text-gray-300 z-10 will-change-transform"
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
+                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
             >
                 Breaking things and fixing them (on purpose, usually).
             </motion.p>

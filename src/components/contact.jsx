@@ -93,7 +93,7 @@ export default function Contact() {
                     variants={slideIn('right', 'tween', 0.2, 1)}
                     initial="hidden"
                     animate={isInView ? 'show' : 'hidden'}
-                    className="flex-1 w-full aspect-[16/9] sm:aspect-[4/3]"
+                    className="flex-1 w-full max-w-[900px] max-h-[900px] aspect-square mx-auto"
                 >
                     <Canvas camera={{ position: [-4, 3, 6], fov: 45, near: 0.1, far: 200 }}>
                         {/* Ambient light for general illumination */}
