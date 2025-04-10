@@ -1,4 +1,4 @@
-import { useLocation, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 import phoneIcon from "../assets/phoneIcon.png";

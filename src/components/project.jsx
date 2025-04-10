@@ -1,12 +1,36 @@
-import { div, p } from "framer-motion/client";
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import ProjectCard from './ProjectCard';
 
-export default function Project({ projectName}) {
+export default function Project({ projects }) {
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true });
+
+    const containerVariants = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: { opacity: 1, scale: 1 },
+    };
+
     return (
-        <div className="container mx-auto px-4 xl:px-20 pt-12">
-            <p className="text-gray-300 pb-2 text-center text-xs sm:text-lg">WHAT I HAVE DONE SO FAR</p>
-            <h3 className="text-white font-bold text-3xl sm:text-6xl text-center">{projectName}</h3>
-
-            <div className="border-4 h-[500px] left-[50%] ml-3 top-0 border-[#009b5f]"></div>
-        </div>
+        <motion.div
+            ref={sectionRef}
+            className="flex flex-col lg:flex-row flex-wrap py-12 gap-13 justify-center items-center text-gray-300"
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            transition={{ staggerChildren: 0.2 }}
+        >
+            {projects.map((project, index) => (
+                <ProjectCard
+                    key={index}
+                    projectName={project.name}
+                    imageUrl={project.imageUrl}
+                    githubLink={project.githubLink}
+                    description={project.description}
+                    containerVariants={containerVariants}
+                    index={index}
+                    isInView={isInView}
+                />
+            ))}
+        </motion.div>
     );
 }
