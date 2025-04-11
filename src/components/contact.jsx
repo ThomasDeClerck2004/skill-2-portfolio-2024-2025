@@ -37,7 +37,7 @@ export default function Contact() {
                     className="flex-[0.75] bg-[#1a1a1a] p-8 rounded-2xl"
                 >
                     <div className="rounded-2xl bg-[#1a1a1a]">
-                        <p className="text-gray-300 pb-2 text-xs lg:text-lg">GET IN TOUCH</p>
+                        <p className="text-[#009b5f] font-medium tracking-wider uppercase pb-2 text-xs lg:text-lg">GET IN TOUCH</p>
                         <h3 className="text-white font-bold text-3xl lg:text-6xl">Contact.</h3>
     
                         <form

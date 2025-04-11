@@ -19,7 +19,7 @@ export default function Work() {
         >
             <div className="container mx-auto px-4 xl:px-20 pt-12 pb-24">
                 <motion.p
-                    className="text-gray-300 pb-2 text-xs sm:text-lg sm:text-left text-center"
+                    className="text-[#009b5f] pb-2 sm:text-left text-center text-xs sm:text-lg font-medium tracking-wider uppercase"
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                     transition={{ duration: 0.5, delay: 0.3 }}

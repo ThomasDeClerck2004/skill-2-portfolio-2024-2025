@@ -15,7 +15,7 @@ export default function About() {
                     initial="hidden"
                     animate={isInView ? 'show' : 'hidden'}
                 >
-                    <p className="text-gray-300 pb-2 sm:text-left text-center text-xs sm:text-lg">INTRODUCTION</p>
+                    <p className="text-[#009b5f] pb-2 sm:text-left text-center text-xs sm:text-lg font-medium tracking-wider uppercase">INTRODUCTION</p>
                     <h3 className="text-white font-bold text-3xl sm:text-6xl sm:text-left text-center">About me.</h3>
                 </motion.div>
 
