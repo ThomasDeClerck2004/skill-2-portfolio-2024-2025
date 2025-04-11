@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import ProjectCard from './ProjectCard';
+import { ProjectCard } from "../components";
 
 export default function Project({ projects }) {
     const sectionRef = useRef(null);
