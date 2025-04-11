@@ -6,11 +6,27 @@ export default function Experience() {
     const sectionRef = useRef(null);
     const isInView = useInView(sectionRef, { once: true });
 
+    // Variants for the timeline line
+    const lineVariants = {
+        hidden: { width: 0 },
+        visible: { width: '100%', transition: { duration: 0.8, ease: 'easeOut' } },
+    };
+
+    // Variants for timeline items
+    const itemVariants = {
+        hidden: { x: 100, opacity: 0 },
+        visible: (i) => ({
+            x: 0,
+            opacity: 1,
+            transition: { duration: 0.8, ease: 'easeOut', delay: i * 0.2 },
+        }),
+    };
+
     return (
         <section ref={sectionRef}>
             <div className="container mx-auto px-4 xl:px-20 pt-24">
                 <motion.div
-                    initial={{ y: -100, opacity: 0 }}
+                    initial={{ y: 100, opacity: 0 }}
                     animate={isInView ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
                 >
@@ -19,39 +35,72 @@ export default function Experience() {
                 </motion.div>
                 
                 {/* Timeline */}
-                <motion.div className="mt-12 border-l-4 border-[#009b5f]"
-                    variants={slideIn('left', 'tween', 0.2, 1)}
+                <motion.div
+                    className="mt-12 border-l-4 border-[#009b5f]"
                     initial="hidden"
-                    animate={isInView ? 'show' : 'hidden'}
+                    animate={isInView ? "visible" : "hidden"}
+                    variants={lineVariants}
                 >
                     <div className="ml-4">
-                        {/* Timeline Item */}
-                        <div className="mb-8">
-                            <div className="flex items-center">
-                                <img src="/assets/checkmark.png" alt="Checkmark" className="w-4 h-4 sm:w-8 sm:h-8 rounded-full" />
-                                <p className="ml-4 text-[#009b5f] font-bold">Mar 15, 2024</p>
-                            </div>
-                            <div className="ml-8 mt-2 sm:ml-12 sm:border-2 sm:border-[#009b5f] sm:rounded-lg sm:p-4 sm:bg-gray-800">
-                                <h4 className="text-white font-semibold">Project Kickoff</h4>
-                                <p className="text-gray-400">
-                                    Initial team meeting and project scope definition. Established key milestones and resource allocation.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Timeline Item */}
-                        <div className="mb-8">
-                            <div className="flex items-center">
-                                <div className="w-4 h-4 sm:w-8 sm:h-8 border-4 border-[#009b5f] rounded-full"></div>
-                                <p className="ml-4 text-[#009b5f] font-bold">Mar 15, 2024</p>
-                            </div>
-                            <div className="ml-8 mt-2 sm:ml-12 sm:border-2 sm:border-[#009b5f] sm:rounded-lg sm:p-4 sm:bg-gray-800">
-                                <h4 className="text-white font-semibold">Project Kickoff</h4>
-                                <p className="text-gray-400">
-                                    Initial team meeting and project scope definition. Established key milestones and resource allocation.
-                                </p>
-                            </div>
-                        </div>
+                        {/* Timeline Items */}
+                        {[
+                            {
+                                date: "Sep. 2023 - Present",
+                                title: "Bachelor of Applied Computer Science - Thomas More, Geel",
+                                description: "Currently studying applied computer science with a focus on software development, databases, networking, and modern IT tools.",
+                            },
+                            {
+                                date: "Sep. 2023",
+                                title: "Driver’s License Obtained - Category B",
+                                description: "Successfully earned driver’s license, enabling independent travel for work and study.",
+                            },
+                            {
+                                date: "Mar. 2023 - Apr. 2023",
+                                title: "Intern - NetConnect, Zandhoven",
+                                description: "Hands-on internship where I assisted in network configuration, troubleshooting, and technical support.",
+                            },
+                            {
+                                date: "Sep. 2017 - Jun. 2023",
+                                title: "TSO - IT Management - GO! Onderwijs Vlaanderen",
+                                description: "Graduated with a technical secondary education in IT, covering programming, hardware, networking, and basic IT project work.",
+                            },
+                            {
+                                date: "Summer 2021 - 2024 (each Jul.)",
+                                title: "Summer Job - Colruyt, Herentals",
+                                description: "Worked across four summer seasons in retail, focusing on customer service, stock management, and teamwork in a fast-paced environment.",
+                            },
+                        ].map((item, index) => (
+                            <motion.div
+                                key={index}
+                                className="mb-8"
+                                custom={index}
+                                initial="hidden"
+                                animate={isInView ? "visible" : "hidden"}
+                                variants={itemVariants}
+                            >
+                                <div className="flex items-center">
+                                    {/* Conditionally render the checkmark image or placeholder */}
+                                    {!item.date.includes("Present") ? (
+                                        <img
+                                            src="/assets/checkmark.png"
+                                            alt="Checkmark"
+                                            className="w-4 h-4 sm:w-8 sm:h-8 rounded-full"
+                                        />
+                                    ) : (
+                                        <div className="w-4 h-4 sm:w-8 sm:h-8 border-4 border-[#009b5f] rounded-full"></div>
+                                    )}
+                                    <p className="ml-4 text-[#009b5f] font-bold">{item.date}</p>
+                                </div>
+                                <div className="ml-8 mt-2 sm:ml-12 sm:border-2 sm:border-[#009b5f] sm:rounded-lg sm:p-4 sm:bg-gray-800">
+                                    <h4 className="text-white font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
+                                        {item.title}
+                                    </h4>
+                                    <p className="text-gray-400 sm:whitespace-nowrap overflow-hidden text-ellipsis">
+                                        {item.description}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </motion.div>
             </div>
