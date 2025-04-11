@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
-import logo from "../assets/logo.png";
-import phoneIcon from "../assets/phoneIcon.png";
-import closeIcon from "../assets/closeIcon.png";
+import logo from "/assets/logo.png";
+import phoneIcon from "/assets/phoneIcon.png";
+import closeIcon from "/assets/closeIcon.png";
 
 export default function Nav() {
     const [toggle, setToggle] = useState(false);

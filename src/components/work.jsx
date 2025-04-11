@@ -41,37 +41,37 @@ export default function Work() {
                     projects={[
                         {
                             name: "Donkey Kong",
-                            imageUrl: "/src/assets/placeholder.png",
+                            imageUrl: "/assets/placeholder.png",
                             githubLink: "https://github.com/user/project1",
                             description: "This is a description of Project 2.",
                         },
                         {
                             name: "Filmvault",
-                            imageUrl: "/src/assets/placeholder.png",
+                            imageUrl: "/assets/placeholder.png",
                             githubLink: "https://github.com/user/project2",
                             description: "This is a description of Project 2.",
                         },
                         {
                             name: "Project Skil-2",
-                            imageUrl: "/src/assets/placeholder.png",
+                            imageUrl: "/assets/placeholder.png",
                             githubLink: "https://github.com/user/project2",
                             description: "This is a description of Project 2.",
                         },
                         {
                             name: "IoT-project",
-                            imageUrl: "/src/assets/placeholder.png",
+                            imageUrl: "/assets/placeholder.png",
                             githubLink: "https://github.com/user/project2",
                             description: "This is a description of Project 2.",
                         },
                         {
                             name: "Brussels brews",
-                            imageUrl: "/src/assets/placeholder.png",
+                            imageUrl: "/assets/placeholder.png",
                             githubLink: "https://github.com/user/project2",
                             description: "This is a description of Project 2.",
                         },
                         {
                             name: "My personal portfolio",
-                            imageUrl: "/src/assets/placeholder.png",
+                            imageUrl: "/assets/placeholder.png",
                             githubLink: "https://github.com/user/project2",
                             description: "This is a description of Project 2.",
                         },

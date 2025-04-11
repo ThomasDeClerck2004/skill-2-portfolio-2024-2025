@@ -28,7 +28,7 @@ export default function Experience() {
                         {/* Timeline Item */}
                         <div className="mb-8">
                             <div className="flex items-center">
-                                <img src="/src/assets/checkmark.png" alt="Checkmark" className="w-4 h-4 sm:w-8 sm:h-8 rounded-full" />
+                                <img src="/assets/checkmark.png" alt="Checkmark" className="w-4 h-4 sm:w-8 sm:h-8 rounded-full" />
                                 <p className="ml-4 text-[#009b5f] font-bold">Mar 15, 2024</p>
                             </div>
                             <div className="ml-8 mt-2 sm:ml-12 sm:border-2 sm:border-[#009b5f] sm:rounded-lg sm:p-4 sm:bg-gray-800">

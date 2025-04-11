@@ -42,7 +42,7 @@ export default function About() {
                             }}
                         >
                             <img
-                                src="/src/assets/placeholder.png"
+                                src="/assets/placeholder.png"
                                 alt="about"
                                 className="w-full h-full object-cover rounded-2xl"
                             />
@@ -68,22 +68,22 @@ export default function About() {
 
                         <div className='flex flex-col mt-4 text-white'>
                             <div className='flex flex-row items-center gap-1 mb-3'>
-                                <img src="/src/assets/gmail.png" alt="about" className="w-6 h-6 mr-2" />
+                                <img src="/assets/gmail.png" alt="about" className="w-6 h-6 mr-2" />
                                 <p>Email: <a href='mailto:thomas.de.clerck4@gmail.com' className='underline underline-offset-4 decoration-[#009b5f] hover:text-[#009b5f]'>thomas.de.clerck4@gmail.com</a></p>
                             </div>
                             <div className='flex flex-row items-center gap-1 mb-3'>
-                                <img src="/src/assets/github.png" alt="about" className="w-6 h-6 mr-2" />
+                                <img src="/assets/github.png" alt="about" className="w-6 h-6 mr-2" />
                                 <p>Github: <a href='https://github.com/ThomasDeClerck2004' target='_blank' className='underline underline-offset-4 decoration-[#009b5f] hover:text-[#009b5f]'>ThomasDeClerck2004</a> & <a href='https://github.com/Thomas997' target='_blank' className='underline underline-offset-4 decoration-[#009b5f] hover:text-[#009b5f]'>Thomas997</a></p>
                             </div>
                             <div className='flex flex-row items-center gap-1 mb-3'>
-                                <img src="/src/assets/linkedin.png" alt="about" className="w-6 h-6 mr-2" />
+                                <img src="/assets/linkedin.png" alt="about" className="w-6 h-6 mr-2" />
                                 <p>LinkedIn: <a href='https://www.linkedin.com/in/thomas-de-clerck-b9162b2a2/' target='_blank' className='underline underline-offset-4 decoration-[#009b5f] hover:text-[#009b5f]'>thomas-de-clerck</a></p>
                             </div>
                         </div>
 
                         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mt-3">
                             <a
-                                href="/src/assets/CV-L-2025-EN.pdf"
+                                href="/assets/CV_Thomas_De_Clerck_2025_EN.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-[#009b5f] hover:bg-[#01b872] border-2 border-[#009b5f] hover:border-[#01b872] py-3 px-6 w-full sm:w-auto text-white font-bold shadow-md shadow-primary rounded-xl text-center inline-block"
@@ -91,7 +91,7 @@ export default function About() {
                                VIEW RESUME (EN)
                             </a>
                             <a
-                                href="/src/assets/CV-L-2025-NL.pdf"
+                                href="/assets/CV_Thomas_De_Clerck_2025_NL.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-[#0d0d0d] hover:bg-[#009b5f] border-2 border-[#009b5f] py-3 px-6 w-full sm:w-auto text-white font-bold shadow-md shadow-primary rounded-xl text-center inline-block"
