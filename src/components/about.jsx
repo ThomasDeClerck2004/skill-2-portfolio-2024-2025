@@ -39,13 +39,13 @@ export default function About() {
                                 width: '100%',
                                 height: '100%',
                                 boxShadow: '0 0 40px #009b5f', // Add green glow effect
-                                borderRadius: '1.2rem', // Ensure the border is rounded
+                                borderRadius: '1.2rem',
                             }}
                         >
                             <img
                                 src="/src/assets/placeholder.png"
                                 alt="about"
-                                className="w-full h-full object-cover rounded-2xl" // Ensure the image is rounded
+                                className="w-full h-full object-cover rounded-2xl"
                             />
                         </Tilt>
                     </motion.div>
