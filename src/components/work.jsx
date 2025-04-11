@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import Tilt from 'react-parallax-tilt';
 import { Project } from '../components';
 
 export default function Work() {
