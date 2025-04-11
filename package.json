@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prepare": "npm rebuild lightningcss",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "postinstall": "npm rebuild lightningcss || true"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@react-three/drei": "^10.0.6",
