@@ -26,7 +26,7 @@ export default function Contact() {
         <section
             id="contact"
             ref={sectionRef}
-            className="flex justify-center items-center bg-[#000301] overflow-hidden"
+            className="flex justify-center items-center overflow-hidden"
         >
             <div className="container mx-auto px-4 xl:px-20 py-12 flex flex-col-reverse xl:flex-row gap-10 rounded-2xl shadow-lg">
                 {/* Contact Form */}
@@ -34,9 +34,9 @@ export default function Contact() {
                     variants={slideIn('left', 'tween', 0.2, 1)}
                     initial="hidden"
                     animate={isInView ? 'show' : 'hidden'}
-                    className="flex-[0.75] bg-[#131313] p-8 rounded-2xl"
+                    className="flex-[0.75] bg-[#1a1a1a] p-8 rounded-2xl"
                 >
-                    <div className="rounded-2xl bg-[#131313]">
+                    <div className="rounded-2xl bg-[#1a1a1a]">
                         <p className="text-gray-300 pb-2 text-xs lg:text-lg">GET IN TOUCH</p>
                         <h3 className="text-white font-bold text-3xl lg:text-6xl">Contact.</h3>
     

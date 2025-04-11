@@ -16,9 +16,9 @@ export default function Work() {
         <section
             id="work"
             ref={sectionRef}
-            className="flex justify-center items-center bg-[#000301] overflow-hidden"
+            className="flex justify-center items-center overflow-hidden"
         >
-            <div className="container mx-auto px-4 xl:px-20 py-12">
+            <div className="container mx-auto px-4 xl:px-20 pt-12 pb-24">
                 <motion.p
                     className="text-gray-300 pb-2 text-xs sm:text-lg sm:text-left text-center"
                     initial="hidden"

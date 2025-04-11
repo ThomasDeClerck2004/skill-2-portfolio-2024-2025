@@ -8,7 +8,7 @@ export default function Skills() {
     const isInView = useInView(sectionRef, { once: true });
 
     return (
-        <div ref={sectionRef} className="container mx-auto px-4 xl:px-20 py-12">
+        <div ref={sectionRef} className="container mx-auto px-4 xl:px-20 pt-12 pb-24">
             <motion.div className='flex flex-col'
                 variants={slideIn('left', 'tween', 0.2, 1)}
                 initial="hidden"

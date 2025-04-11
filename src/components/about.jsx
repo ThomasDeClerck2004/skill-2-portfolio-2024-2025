@@ -2,14 +2,13 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
 import { slideIn } from '../utils/animations';
-import { Skill } from "../components";
 
 export default function About() {
     const sectionRef = useRef(null);
     const isInView = useInView(sectionRef, { once: true });
 
     return (
-        <section id="about" ref={sectionRef} className="flex justify-center items-center bg-[#000301] overflow-hidden">
+        <section id="about" ref={sectionRef} className="flex justify-center items-center overflow-hidden">
             <div className="container mx-auto px-4 xl:px-20 pt-12">
                 <motion.div
                     variants={slideIn('left', 'tween', 0.2, 1)}
@@ -38,7 +37,7 @@ export default function About() {
                             style={{
                                 width: '100%',
                                 height: '100%',
-                                boxShadow: '0 0 40px #009b5f', // Add green glow effect
+                                boxShadow: '0 0 20px #009b5f', // Add green glow effect
                                 borderRadius: '1.2rem',
                             }}
                         >
@@ -95,35 +94,10 @@ export default function About() {
                                 href="/src/assets/CV-L-2025-NL.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-[#000301] hover:bg-[#009b5f] border-2 border-[#009b5f] py-3 px-6 w-full sm:w-auto text-white font-bold shadow-md shadow-primary rounded-xl text-center inline-block"
+                                className="bg-[#0d0d0d] hover:bg-[#009b5f] border-2 border-[#009b5f] py-3 px-6 w-full sm:w-auto text-white font-bold shadow-md shadow-primary rounded-xl text-center inline-block"
                             >
                                 VIEW RESUME (NL)
                             </a>
-                        </div>
-                    </motion.div>
-                </div>
-
-                <div>
-                    <motion.div className='flex flex-col mb-6'
-                        variants={slideIn('left', 'tween', 0.2, 1)}
-                        initial="hidden"
-                        animate={isInView ? 'show' : 'hidden'}
-                    >
-                        <h2 className="text-gray-300 font-bold text-3xl lg:text-4xl mb-3 pb-1 border-l-4 border-[#009b5f] pl-4">
-                            My Hobbies
-                        </h2>
-
-                        <div className='lg:ml-5'>
-                            <motion.div className='flex flex-row flex-wrap gap-4 pb-5'
-                                variants={slideIn('left', 'tween', 0.2, 1)}
-                                initial="hidden"
-                                animate={isInView ? 'show' : 'hidden'}
-                            >
-                                <Skill skillName="Fitness" />
-                                <Skill skillName="Walking" />
-                                <Skill skillName="Tennis" />
-                                <Skill skillName="Gaming" />
-                            </motion.div>
                         </div>
                     </motion.div>
                 </div>

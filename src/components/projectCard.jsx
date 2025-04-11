@@ -13,7 +13,7 @@ export default function ProjectCard({ projectName, imageUrl, githubLink, descrip
             transitionSpeed={400}
         >
             <motion.div
-                className="bg-gradient-to-br from-[#00221556] to-[#399b75] border-4 border-black rounded-2xl shadow-lg shadow-primary p-6 w-[400px] h-[500px] cursor-pointer"
+                className="bg-gradient-to-br from-[#031e1456] to-[#399b75] border-4 border-[#0d0d0d] rounded-2xl shadow-lg shadow-primary p-6 w-[400px] h-[500px] cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}

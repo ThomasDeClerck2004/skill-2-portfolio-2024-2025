@@ -19,7 +19,7 @@ function Main() {
 function App() {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-[#000301]">
+      <div className="relative z-0 bg-[#0d0d0d]">
         <Nav />
           <Main />
         <Footer />
