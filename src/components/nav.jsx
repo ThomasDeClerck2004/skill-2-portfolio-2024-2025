@@ -36,7 +36,7 @@ export default function Nav() {
                 
                 <ul className="list-none hidden sm:flex flex-row gap-10 text-lg font-semibold">
                     <NavLink
-                        to="/about"
+                        to="/"
                         className={({ isActive }) =>
                             `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                         }
@@ -51,7 +51,7 @@ export default function Nav() {
                     </NavLink>
 
                     <NavLink 
-                        to="/work" 
+                        to="/" 
                         className={({ isActive }) =>
                             `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                         }
@@ -66,7 +66,7 @@ export default function Nav() {
                     </NavLink>
 
                     <NavLink 
-                        to="/contact" 
+                        to="/" 
                         className={({ isActive }) =>
                             `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                         }
@@ -94,7 +94,7 @@ export default function Nav() {
                     >
                         <ul className="list-none flex flex-col gap-4 text-lg font-semibold">
                             <NavLink
-                                to="/about"
+                                to="/"
                                 className={({ isActive }) =>
                                     `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                                 }
@@ -109,7 +109,7 @@ export default function Nav() {
                             </NavLink>
 
                             <NavLink 
-                                to="/work" 
+                                to="/" 
                                 className={({ isActive }) =>
                                     `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                                 }
@@ -124,7 +124,7 @@ export default function Nav() {
                             </NavLink>
 
                             <NavLink 
-                                to="/contact" 
+                                to="/" 
                                 className={({ isActive }) =>
                                     `${isActive ? 'text-[#009b5f]' : 'text-gray-400'} hover:text-gray-300`
                                 }
