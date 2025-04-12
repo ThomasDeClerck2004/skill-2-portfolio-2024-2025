@@ -20,12 +20,17 @@ export default function ProjectCard({ projectName, imageUrl, link, description, 
                 transition={{ duration: 0.5, delay: index * 0.3 }}
                 variants={containerVariants}
             >
-                <img
-                    src={imageUrl || "/src/assets/placeholder.png"}
-                    alt={projectName}
-                    className="w-full h-3/5 object-cover rounded-lg mb-4"
-                />
-                <h4 className="text-white font-bold text-2xl">{projectName}</h4>
+                <div className="w-full max-w-md mx-auto bg-gray-300 shadow-lg rounded-xl overflow-hidden">
+                    <img
+                        src={imageUrl || "/src/assets/placeholder.png"}
+                        alt={projectName}
+                        className="w-full h-60 object-cover"
+                    />
+                    <div className="p-4">
+                        <h2 className="text-lg font-semibold text-gray-800 mb-2">{projectName}</h2>
+                    </div>
+                </div>
+
                 <p className="text-gray-300 text-sm mt-2">{description}</p>
                 <a
                     href={link}

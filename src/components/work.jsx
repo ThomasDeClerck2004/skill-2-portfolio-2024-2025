@@ -53,7 +53,7 @@ export default function Work() {
                         },
                         {
                             name: "Project Skil-2",
-                            imageUrl: "/assets/placeholder.png",
+                            imageUrl: "/assets/duffalo.gif",
                             link: "https://de.duffalos.be/",
                             description: "Together with 5 fellow students, we are developing a website as a team using the SCRUM methodology for an internal client at Thomas More, the football team De Duffalos.",
                         },
@@ -71,7 +71,7 @@ export default function Work() {
                         },
                         {
                             name: "My personal portfolio",
-                            imageUrl: "/assets/placeholder.png",
+                            imageUrl: "/assets/portfolio.gif",
                             link: "https://github.com/ThomasDeClerck2004/skill-2-portfolio-2024-2025",
                             description: "This website was part of a school project, but I decided to build it with React to challenge myself. It wasn’t required, but I wanted to learn something new — and it’s actually my first time using React!",
                         },

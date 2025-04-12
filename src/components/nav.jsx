@@ -62,7 +62,7 @@ export default function Nav() {
                             window.scrollTo({ top, behavior: "smooth" });
                         }}
                     >
-                        Work
+                        Achievements
                     </NavLink>
 
                     <NavLink 
@@ -120,7 +120,7 @@ export default function Nav() {
                                     window.scrollTo({ top, behavior: "smooth" });
                                 }}
                             >
-                                Work
+                                Achievements
                             </NavLink>
 
                             <NavLink 
