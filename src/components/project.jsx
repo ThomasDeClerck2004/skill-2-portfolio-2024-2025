@@ -24,7 +24,7 @@ export default function Project({ projects }) {
                     key={index}
                     projectName={project.name}
                     imageUrl={project.imageUrl}
-                    githubLink={project.githubLink}
+                    link={project.link}
                     description={project.description}
                     containerVariants={containerVariants}
                     index={index}

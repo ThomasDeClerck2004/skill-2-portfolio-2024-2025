@@ -56,6 +56,7 @@ export default function Skills() {
                     >
                         <Skill skillName="Docker" />
                         <Skill skillName="Linux" />
+                        <Skill skillName="Github" />
                     </motion.div>
                 </div>
             </motion.div>

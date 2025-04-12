@@ -34,8 +34,13 @@ export default function Contact() {
                     variants={slideIn('left', 'tween', 0.2, 1)}
                     initial="hidden"
                     animate={isInView ? 'show' : 'hidden'}
-                    className="flex-[0.75] bg-[#1a1a1a] p-8 rounded-2xl"
+                    className="relative flex-[0.75] bg-[#1a1a1a] p-8 rounded-2xl"
                 >
+                    {/* Out of Order Sticker */}
+                    <div className="absolute top-0 left-0 bg-red-600 text-white font-bold text-sm px-4 py-2 rounded-tr-lg rounded-bl-lg z-10">
+                        Out of Order
+                    </div>
+
                     <div className="rounded-2xl bg-[#1a1a1a]">
                         <p className="text-[#009b5f] font-medium tracking-wider uppercase pb-2 text-xs lg:text-lg">GET IN TOUCH</p>
                         <h3 className="text-white font-bold text-3xl lg:text-6xl">Contact.</h3>
