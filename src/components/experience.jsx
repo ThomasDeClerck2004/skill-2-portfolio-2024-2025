@@ -79,7 +79,7 @@ export default function Experience() {
                                 variants={itemVariants}
                             >
                                 <div className="flex items-center">
-                                    {/* Conditionally render the checkmark image or placeholder */}
+                                    {/* Conditionally render the checkmark image */}
                                     {!item.date.includes("Present") ? (
                                         <img
                                             src="/assets/checkmark.png"
@@ -91,7 +91,7 @@ export default function Experience() {
                                     )}
                                     <p className="ml-4 text-[#009b5f] font-bold">{item.date}</p>
                                 </div>
-                                <div className="ml-8 mt-2 sm:ml-12 sm:border-2 sm:border-[#009b5f] sm:rounded-lg sm:p-4 sm:bg-gray-800">
+                                <div className="ml-8 mt-2 sm:ml-12 sm:border-2 sm:border-[#009b5f] sm:rounded-lg sm:p-4 sm:bg-[#1a1a1a]">
                                     <h4 className="text-white font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
                                         {item.title}
                                     </h4>
