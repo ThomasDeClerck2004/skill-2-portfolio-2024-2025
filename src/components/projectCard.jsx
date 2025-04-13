@@ -38,7 +38,7 @@ export default function ProjectCard({ projectName, imageUrl, link, description, 
                     rel="noopener noreferrer"
                     className="absolute bottom-4 right-4"
                 >
-                    <button className="bg-[#009b5f] hover:bg-[#01b872] text-white py-2 px-4 rounded-lg transition duration-300 ease-in-out">
+                    <button className="bg-[#009b5f] hover:bg-[#01b872] font-bold text-white py-2 px-4 rounded-lg transition duration-300 ease-in-out">
                         View
                     </button>
                 </a>

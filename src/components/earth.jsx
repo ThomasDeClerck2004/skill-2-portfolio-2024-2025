@@ -13,5 +13,5 @@ export default function Earth() {
         }
     });
     
-    return <primitive ref={earthRef} object={scene} scale={0.002} position={[0, 0, 0]} />;
+    return <primitive ref={earthRef} object={scene} scale={0.0025} position={[0, 0, 0]} />;
 }
