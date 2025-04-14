@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Modal({ project, onClose }) {
     return (
-        <div className="fixed inset-0 bg-transparent flex justify-center items-start z-50 pointer-events-none backdrop-blur-md">
-            <div className="bg-[#1a1a1a] border-2 border-[#009b5f] rounded-lg p-8 w-4/5 max-w-5xl pointer-events-auto relative mt-23">
+        <div className="fixed inset-0 bg-transparent flex justify-center items-center z-50 pointer-events-none backdrop-blur-md">            
+            <div className="bg-[#1a1a1a] border-2 border-[#009b5f] rounded-lg p-8 w-4/5 max-w-5xl pointer-events-auto relative mx-auto my-auto sm:w-full sm:p-4 sm:mx-4">                
                 {/* Header with close button */}
                 <div className="flex justify-between items-start mb-4">
                     <h2 className="inline-flex text-3xl font-bold text-white bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500">
@@ -42,7 +42,7 @@ export default function Modal({ project, onClose }) {
 
                 <div className='space-y-6'>
                     {/* Project description */}
-                    <p className="text-gray-300 text-lg mb-6">{project.descriptionLong}</p>
+                    <p className="text-gray-300 text-lg mb-6 sm:text-sm sm:break-words">{project.descriptionLong}</p>
 
                     {/* Context section */}
                     <div className="bg-[#2c2b2b] shadow-2xl rounded-lg p-4 border-l-4 border-emerald-500">

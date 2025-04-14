@@ -7,6 +7,7 @@ export default function Hero() {
 
     return (
         <section
+            id="hero"
             ref={ref}
             className="relative flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-black to-[#0c6e48] overflow-hidden mb-5"
         >

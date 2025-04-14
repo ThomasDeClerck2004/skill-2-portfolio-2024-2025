@@ -12,7 +12,7 @@ export default function Nav() {
         const handleScroll = () => {
             setScrolled(window.scrollY > 10);
 
-            const sections = ["about", "work", "contact"];
+            const sections = ["hero", "about", "work", "contact"];
             const offset = 80; // Height of your fixed navigation bar
             let currentSection = "about";
 
