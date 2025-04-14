@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Earth from '../components/earth.jsx';
 import { slideIn } from '../utils/animations';
+import emailjs from 'emailjs-com'; // Import EmailJS
 
 export default function Contact() {
     const formRef = useRef();
@@ -18,9 +19,40 @@ export default function Contact() {
     
     const [loading, setLoading] = useState(false);
 
-    const handleChange = (e) => {}
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setForm({ ...form, [name]: value });
+    };
 
-    const handleSubmit = (e) => {}
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoading(true);
+
+        // Use EmailJS to send the form data
+        emailjs
+            .send(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID, // Replace with your EmailJS service ID
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Replace with your EmailJS template ID
+                {
+                    name: form.name,
+                    email: form.email,
+                    message: form.message,
+                },
+                import.meta.env.VITE_EMAILJS_USER_ID // Replace with your EmailJS user ID
+            )
+            .then(
+                () => {
+                    setLoading(false);
+                    alert('Message sent successfully!');
+                    setForm({ name: '', email: '', message: '' }); // Reset form
+                },
+                (error) => {
+                    setLoading(false);
+                    console.error('Failed to send message:', error);
+                    alert('Something went wrong. Please try again.');
+                }
+            );
+    };
 
     return (
         <section
@@ -36,11 +68,6 @@ export default function Contact() {
                     animate={isInView ? 'show' : 'hidden'}
                     className="relative flex-[0.75] bg-[#1a1a1a] p-8 rounded-2xl"
                 >
-                    {/* Out of Order Sticker */}
-                    <div className="absolute top-0 left-0 bg-red-600 text-white font-bold text-sm px-4 py-2 rounded-tr-lg rounded-bl-lg z-10">
-                        Out of Order
-                    </div>
-
                     <div className="rounded-2xl bg-[#1a1a1a]">
                         <p className="text-[#009b5f] font-medium tracking-wider uppercase pb-2 text-xs lg:text-lg">GET IN TOUCH</p>
                         <h3 className="text-white font-bold text-3xl lg:text-6xl">Contact.</h3>
