@@ -41,6 +41,7 @@ export default function Project({ projects }) {
                         index={index}
                         isInView={isInView}
                         onView={() => openModal(project)}
+                        numberOfContributors={project.numberOfContributors}
                     />
                 ))}
             </motion.div>

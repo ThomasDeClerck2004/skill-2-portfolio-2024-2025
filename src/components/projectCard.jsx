@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
 
-export default function ProjectCard({ projectName, imageUrl, description, containerVariants, index, isInView, onView }) {
+export default function ProjectCard({ projectName, imageUrl, description, containerVariants, index, isInView, onView, numberOfContributors }) {
     return (
         <Tilt
             className="shadow-lg"
@@ -27,8 +27,15 @@ export default function ProjectCard({ projectName, imageUrl, description, contai
                         className="w-full h-60 object-cover"
                     />
                     <div className="p-4">
-                        <h2 className="text-lg font-semibold text-white mb-2">{projectName}</h2>
+                        <h2 className="text-lg font-semibold text-white">{projectName}</h2>
                     </div>
+                </div>
+
+                <div className='flex items-center mt-2'>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="flex items-end h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    </svg>
+                    <p className='flex justify-center items-center ml-1 text-xl'>{numberOfContributors}</p>
                 </div>
 
                 <p className="text-gray-300 text-sm mt-2">{description}</p>
