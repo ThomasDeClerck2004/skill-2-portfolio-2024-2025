@@ -85,6 +85,7 @@ export default function Contact() {
                                     value={form.name}
                                     onChange={handleChange}
                                     placeholder="What is your name?"
+                                    required
                                     className="bg-[#1f1f1f] py-4 px-6 text-gray-300 rounded-lg outline-none border-none font-medium"
                                 />
                             </label>
@@ -96,6 +97,7 @@ export default function Contact() {
                                     value={form.email}
                                     onChange={handleChange}
                                     placeholder="What is your email?"
+                                    required
                                     className="bg-[#1f1f1f] py-4 px-6 text-gray-300 rounded-lg outline-none border-none font-medium"
                                 />
                             </label>
@@ -107,6 +109,7 @@ export default function Contact() {
                                     value={form.message}
                                     onChange={handleChange}
                                     placeholder="What do you want to say?"
+                                    required
                                     className="bg-[#1f1f1f] py-4 px-6 text-gray-300 rounded-lg outline-none border-none font-medium"
                                 />
                             </label>

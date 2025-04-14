@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
 
-export default function ProjectCard({ projectName, imageUrl, link, description, containerVariants, index, isInView }) {
+export default function ProjectCard({ projectName, imageUrl, description, containerVariants, index, isInView, onView }) {
     return (
         <Tilt
             className="shadow-lg"
@@ -32,16 +32,12 @@ export default function ProjectCard({ projectName, imageUrl, link, description, 
                 </div>
 
                 <p className="text-gray-300 text-sm mt-2">{description}</p>
-                <a
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute bottom-4 right-4"
+                <button
+                    onClick={onView}
+                    className="hidden sm:block bg-[#009b5f] hover:bg-[#01b872] font-bold text-white py-2 px-4 rounded-lg transition duration-300 ease-in-out absolute bottom-4 right-4"
                 >
-                    <button className="bg-[#009b5f] hover:bg-[#01b872] font-bold text-white py-2 px-4 rounded-lg transition duration-300 ease-in-out">
-                        View
-                    </button>
-                </a>
+                    View
+                </button>
             </motion.div>
         </Tilt>
     );
