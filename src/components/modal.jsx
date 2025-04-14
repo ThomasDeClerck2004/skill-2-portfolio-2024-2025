@@ -54,7 +54,7 @@ export default function Modal({ project, onClose }) {
                     <div>
                         <div className='mb-2'>
                             <h3 className="text-lg font-semibold text-white flex items-center">
-                            <span className="mr-2">Tools Used | Learned</span>
+                            <span className="mr-2">Tools Used / Learned</span>
                             <span className="h-px flex-grow bg-gradient-to-r from-emerald-500/50 to-transparent"></span>
                             </h3>
                         </div>
