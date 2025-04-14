@@ -40,16 +40,22 @@ export default function Work() {
                 <Project
                     projects={[
                         {
+                            name: "FilmVault",
+                            imageUrl: "/assets/FilmVault.gif",
+                            link: "https://filmvault.filmvault.be/",
+                            description: "A website created for people who want to keep track of which movie they've watched now and which they haven't.",
+                        },
+                        {
                             name: "Donkey Kong",
                             imageUrl: "/assets/donkeykong.gif",
                             link: "https://github.com/Thomas997/Donkey-Kong",
                             description: "A project me and a friend created for our final project in high school, this was my first big programming assignment.",
                         },
                         {
-                            name: "Filmvault",
-                            imageUrl: "/assets/FilmVault.gif",
-                            link: "https://filmvault.filmvault.be/",
-                            description: "A website created for people who want to keep track of which movie they've watched now and which they haven't.",
+                            name: "Personal Portfolio",
+                            imageUrl: "/assets/portfolio.gif",
+                            link: "https://github.com/ThomasDeClerck2004/skill-2-portfolio-2024-2025",
+                            description: "This website was part of a school project, but I decided to build it with React to challenge myself. It wasn’t required, but I wanted to learn something new — and it’s actually my first time using React!",
                         },
                         {
                             name: "Project Skil-2",
@@ -58,22 +64,16 @@ export default function Work() {
                             description: "Together with 5 fellow students, we are developing a website as a team using the SCRUM methodology for an internal client at Thomas More, the football team De Duffalos.",
                         },
                         {
-                            name: "IoT-project",
-                            imageUrl: "/assets/IoT.png",
-                            link: "https://www.youtube.com/watch?v=Z2LBS0gXR6E",
-                            description: "Together with two fellow students, we developed a project using IoT components. We chose to build a bridge that operates with a small motor and sound sensors.",
-                        },
-                        {
-                            name: "Brussels brews",
+                            name: "Brussels Brews",
                             imageUrl: "/assets/brews.gif",
                             link: "https://brewery1itf604.netlify.app/",
                             description: "Together with two fellow students, we created a website for a fictitious client — Brussels Brews, a fictional beer company based in Brussels.",
                         },
                         {
-                            name: "My personal portfolio",
-                            imageUrl: "/assets/portfolio.gif",
-                            link: "https://github.com/ThomasDeClerck2004/skill-2-portfolio-2024-2025",
-                            description: "This website was part of a school project, but I decided to build it with React to challenge myself. It wasn’t required, but I wanted to learn something new — and it’s actually my first time using React!",
+                            name: "Project IoT-Bridge",
+                            imageUrl: "/assets/IoT.png",
+                            link: "https://www.youtube.com/watch?v=Z2LBS0gXR6E",
+                            description: "Together with two fellow students, we developed a project using IoT components. We chose to build a bridge that operates with a small motor and sound sensors.",
                         },
                     ]}
                 />
