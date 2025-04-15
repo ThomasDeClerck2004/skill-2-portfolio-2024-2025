@@ -6,7 +6,7 @@ import closeIcon from "/assets/closeIcon.png";
 export default function Nav() {
     const [toggle, setToggle] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const [activeSection, setActiveSection] = useState("about");
+    const [activeSection, setActiveSection] = useState("hero");
 
     useEffect(() => {
         const handleScroll = () => {
@@ -14,7 +14,7 @@ export default function Nav() {
 
             const sections = ["hero", "about", "work", "contact"];
             const offset = 80; // Height of your fixed navigation bar
-            let currentSection = "about";
+            let currentSection = "hero";
 
             sections.forEach((section) => {
                 const element = document.getElementById(section);
