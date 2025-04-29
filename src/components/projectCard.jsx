@@ -13,7 +13,7 @@ export default function ProjectCard({ projectName, imageUrl, description, contai
             transitionSpeed={400}
         >
             <motion.div
-                className="bg-gradient-to-bl from-[#031e1456] to-[#399b75] border-4 border-[#0d0d0d] rounded-2xl shadow-lg shadow-primary p-6 w-[400px] h-[500px] cursor-pointer"
+                className="bg-gradient-to-bl from-[#031e1456] to-[#399b75] border-4 border-[#0d0d0d] rounded-2xl shadow-lg shadow-primary p-6 w-[400px] h-[500px]"
                 whileHover={{ scale: 1.05 }}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
@@ -41,7 +41,7 @@ export default function ProjectCard({ projectName, imageUrl, description, contai
                 <p className="text-gray-300 text-sm mt-2">{description}</p>
                 <button
                     onClick={onView}
-                    className="hidden sm:block bg-[#009b5f] hover:bg-[#01b872] font-bold text-white py-2 px-4 rounded-lg transition duration-300 ease-in-out absolute bottom-4 right-4"
+                    className="hidden sm:block bg-[#009b5f] hover:bg-[#01b872] font-bold text-white py-2 px-4 rounded-lg transition duration-300 ease-in-out absolute bottom-4 right-4 cursor-pointer"
                 >
                     View
                 </button>

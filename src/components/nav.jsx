@@ -49,7 +49,7 @@ export default function Nav() {
             <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
                 {/* Logo */}
                 <button
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 cursor-pointer"
                     onClick={() => scrollToSection("/")}
                 >
                     <img src={logo} alt="Logo" className="w-12 h-12 object-contain" />
@@ -65,7 +65,7 @@ export default function Nav() {
                         <button
                             className={`${
                                 activeSection === "about" ? "text-[#009b5f]" : "text-gray-400"
-                            } hover:text-gray-300`}
+                            } hover:text-gray-300 cursor-pointer`}
                             onClick={() => scrollToSection("about")}
                         >
                             About
@@ -75,7 +75,7 @@ export default function Nav() {
                         <button
                             className={`${
                                 activeSection === "work" ? "text-[#009b5f]" : "text-gray-400"
-                            } hover:text-gray-300`}
+                            } hover:text-gray-300 cursor-pointer`}
                             onClick={() => scrollToSection("work")}
                         >
                             Achievements
@@ -85,7 +85,7 @@ export default function Nav() {
                         <button
                             className={`${
                                 activeSection === "contact" ? "text-[#009b5f]" : "text-gray-400"
-                            } hover:text-gray-300`}
+                            } hover:text-gray-300 cursor-pointer`}
                             onClick={() => scrollToSection("contact")}
                         >
                             Contact

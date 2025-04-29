@@ -17,7 +17,7 @@ export default function Modal({ project, onClose }) {
                     </h2>
                     <button
                         onClick={onClose}
-                        className="flex justify-center items-center w-10 h-10 rounded-full bg-[#2c2b2b] hover:bg-[#353535] text-gray-400 hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        className="flex justify-center items-center w-10 h-10 rounded-full bg-[#2c2b2b] hover:bg-[#353535] text-gray-400 hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer"
                         aria-label="Close modal"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
