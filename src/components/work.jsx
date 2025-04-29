@@ -71,7 +71,7 @@ export default function Work() {
                         },
                         {
                             name: "Project Skil-2 | TTC Westel",
-                            imageUrl: "/assets/duffalo.gif",
+                            imageUrl: "/assets/TTC.gif",
                             link: "/assets/Report_TTC_Westel.pdf",
                             description: "Together with 6 fellow students, I worked on an IT project for an internal client, table tennis club TTC Westel. We created ERDs, Use Case diagrams, and a proof of concept in Figma.",
                             descriptionLong: "As a team of six students (myself, Yme Clonen, Mauro Leonardo, Yorick Peeters, Jaro Wagener, and Brent Janssen), we were assigned to develop an IT project for an internal client: TTC Westel, a local table tennis club in which one of our teachers is involved. In close collaboration with the client, we went through the initial phases of a software project. We created an ERD and a Use Case diagram, analyzed functional requirements, and designed a visual proof of concept using Figma. We also wrote a report detailing our findings and the steps we took to reach our conclusions.",
@@ -101,7 +101,7 @@ export default function Work() {
                         },
                         {
                             name: "Project IoT-Bridge",
-                            imageUrl: "/assets/IoT.png",
+                            imageUrl: "/assets/IoT.gif",
                             link: "https://www.youtube.com/watch?v=Z2LBS0gXR6E",
                             description: "Together with two fellow students, we developed a project using IoT components. We chose to build a bridge that operates with a small motor and sound sensors.",
                             descriptionLong: "In the first year of my studies, during the second semester in the course IoT Essentials, we were given the assignment to create something using IoT. It had to be a project with a sufficiently large concept, so two fellow students and I came up with the idea of a bridge that uses sound sensors to detect boats passing through.",
