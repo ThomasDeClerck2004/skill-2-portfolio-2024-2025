@@ -1,6 +1,14 @@
 import React from 'react';
+import { useEffect } from 'react';
 
 export default function Modal({ project, onClose }) {
+    useEffect(() => {
+        document.body.classList.add('overflow-hidden');
+        return () => {
+            document.body.classList.remove('overflow-hidden');
+        };
+    }, []);
+
     return (
         <div className="fixed inset-0 bg-transparent flex justify-center items-center z-50 pointer-events-none backdrop-blur-md">            
             <div className="bg-[#1a1a1a] border-2 border-[#009b5f] rounded-lg p-8 w-4/5 max-w-5xl pointer-events-auto relative mx-auto my-auto sm:w-full sm:p-4 sm:mx-4">                
