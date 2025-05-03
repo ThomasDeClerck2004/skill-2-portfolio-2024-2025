@@ -54,7 +54,7 @@ export default function Modal({ project, onClose }) {
 
                     {/* Context section */}
                     <div className="bg-[#2c2b2b] shadow-2xl rounded-lg p-4 border-l-4 border-emerald-500">
-                        <h3 className="text-lg font-semibold text-white mb-2">My Contribution</h3>
+                        <h3 className="text-lg font-semibold text-white mb-2">My Contribution & What I Learned</h3>
                         <p className="text-gray-300 text-sm">{project.myContribution}</p>
                     </div>
 
