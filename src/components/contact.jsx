@@ -115,7 +115,7 @@ export default function Contact() {
                             </label>
                             <button
                                 type="submit"
-                                className="bg-[#009b5f] hover:bg-[#01b872] py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl cursor-pointer"
+                                className="bg-[#009b5f] hover:bg-[#01b872] transition duration-300 ease-in-out py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl cursor-pointer"
                             >
                                 {loading ? 'Sending...' : 'Send'}
                             </button>

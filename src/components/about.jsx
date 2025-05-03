@@ -87,7 +87,7 @@ export default function About() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 download="CV_Thomas_De_Clerck_2025_EN.pdf"
-                                className="bg-[#009b5f] hover:bg-[#01b872] border-2 border-[#009b5f] hover:border-[#01b872] py-3 px-6 w-full sm:w-auto text-white font-bold shadow-md shadow-primary rounded-xl text-center inline-block"
+                                className="bg-[#009b5f] hover:bg-[#01b872] border-2 border-[#009b5f] hover:border-[#01b872] transition duration-300 ease-in-out py-3 px-6 w-full sm:w-auto text-white font-bold shadow-md shadow-primary rounded-xl text-center inline-block"
                             >
                                VIEW RESUME (EN)
                             </a>
@@ -96,7 +96,7 @@ export default function About() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 download="CV_Thomas_De_Clerck_2025_NL.pdf"
-                                className="bg-[#0d0d0d] hover:bg-[#009b5f] border-2 border-[#009b5f] py-3 px-6 w-full sm:w-auto text-white font-bold shadow-md shadow-primary rounded-xl text-center inline-block"
+                                className="bg-[#0d0d0d] hover:bg-[#009b5f] border-2 border-[#009b5f] transition duration-300 ease-in-out py-3 px-6 w-full sm:w-auto text-white font-bold shadow-md shadow-primary rounded-xl text-center inline-block"
                             >
                                 VIEW RESUME (NL)
                             </a>
