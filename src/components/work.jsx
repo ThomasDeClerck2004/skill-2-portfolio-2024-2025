@@ -45,7 +45,15 @@ export default function Work() {
                             link: "https://filmvault.filmvault.be/",
                             description: "A website to track movies and series you've watched or want to watch. Features include watchlists, trailers, and downloads.",
                             descriptionLong: "In the first semester of the second year of my studies, during the Web Development course, we were assigned to create a website independently. The project required a sufficiently complex database structure to support multiple entities, allowing us to implement CRUD functionalities and user management. For this assignment, I developed a website that helps users keep track of the films and series they have watched or plan to watch. Users can create and download personalized watchlists, watch trailers, and access various other features designed to enhance their viewing experience.",
-                            myContribution: "I developed this project all by myself. I created the database, the CRUD pages, the authentication system and also the documentation. I've also learned how to call two third-party APIs and use their data. For example, when creating a movie in the movie CRUD page, you can search by name, and the fields will be automatically filled. Try it out! **Email: john.doe@example.com | Password: admin1234**",
+                            myContribution: (
+                                <>
+                                    I developed this project all by myself. I created the database, the CRUD pages, the authentication system and also the documentation. I've also learned how to call two third-party APIs and use their data. For example, when creating a movie in the movie CRUD page, you can search by name, and the fields will be automatically filled. Try it out! (Click on more info button for website) 
+                                    <br />
+                                    <br />
+                                    <strong>User account:</strong> <br />
+                                    Email: jane.doe@example.com | Password: user1234
+                                </>
+                            ),
                             tools: ["Tailwind CSS", "Alpine.js", "Laravel", "Livewire", "Sqlite", "..."],
                             numberOfContributors: 1,
                         },
@@ -54,7 +62,14 @@ export default function Work() {
                             imageUrl: "/assets/donkeykong.gif",
                             link: "https://github.com/Thomas997/Donkey-Kong",
                             description: "A recreation of the classic Donkey Kong game using Windows Forms and C#, made as our high school final project.",
-                            descriptionLong: "In the sixth year of high school, during the second semester in the programming course, we were tasked with creating a program to demonstrate our knowledge of everything we had learned up to that point. A friend and I came up with the idea to recreate Donkey Kong. We had to use C# and Windows Forms, making it a bit more challenging.",
+                            descriptionLong: (
+                                <>
+                                    In the second semester of the sixth year of high school, during the Programming course, we were assigned a final project to demonstrate everything we had learned up to that point. Together with a friend, I chose to recreate the classic game Donkey Kong, a fun but challenging task, especially since we had to use C# and Windows Forms. 
+                                    <br />
+                                    <br />
+                                    The result was a fully working recreation of Donkey Kong, built from scratch using C# and Windows Forms. The project tested our understanding of object-oriented programming, event handling, and graphical interface design, while also allowing us to apply creativity and problem-solving in a practical setting.
+                                </>
+                            ),
                             myContribution: "My contribution to this project was designing the level layout — not the art — and making sure that the walls functioned correctly as obstacles. I also worked on the logic for Donkey Kong throwing barrels and ensured the barrels bounced off each wall properly. In addition, I implemented the ladders. Things like the menu, music and the start screen and more were done by my friend.",
                             tools: ["C#", "Windows Forms", "Access"],
                             numberOfContributors: 2,
@@ -64,7 +79,14 @@ export default function Work() {
                             imageUrl: "/assets/portfolio.gif",
                             link: "https://github.com/ThomasDeClerck2004/skill-2-portfolio-2024-2025",
                             description: "My personal portfolio site, built from scratch in React for a school assignment. It was my first time using React.",
-                            descriptionLong: "In the second year of my studies, during the second semester in the course Skills Integration Lab 2, we were tasked with creating a personal portfolio website to showcase all our skills and programming knowledge. The website you're currently on is the result of that assignment! It wasn't required to build it with React, but I wanted to challenge myself and avoid making another Laravel project. I had already done that with previous projects.",
+                            descriptionLong: (
+                                <>
+                                    During the second semester of my second year as an IT student, I took part in the Skills Integration Lab 2 course, where we were tasked with creating a personal portfolio website to demonstrate our programming skills and knowledge. The site you're currently visiting is the final product of that assignment. 
+                                    <br />
+                                    <br />
+                                    While React wasn’t a requirement, I chose to use it to push myself out of my comfort zone and explore something new, instead of relying on Laravel, which I had already used in earlier projects. This was my first experience working with React, and it turned out to be a rewarding learning process. I gained a lot of new insights and really enjoyed building the site from the ground up.
+                                </>
+                            ),
                             myContribution: "I developed this project all by myself, learning React and other tools along the way, which was a great experience.",
                             tools: ["React", "Tailwind CSS", "Framer Motion", "Alpine.js", "Parallax Tilt", "React Router", "..."],
                             numberOfContributors: 1,
