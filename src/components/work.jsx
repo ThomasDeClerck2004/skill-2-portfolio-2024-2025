@@ -96,8 +96,22 @@ export default function Work() {
                             imageUrl: "/assets/TTC.gif",
                             link: "/assets/Report_TTC_Westel.pdf",
                             description: "Team project with an internal client at Thomas More. We used Scrum, held stand-ups, created ERDs and use cases, and designed a prototype in Figma.",
-                            descriptionLong: "As a team of six students (myself, Yme Clonen, Mauro Leonardo, Yorick Peeters, Jaro Wagener, and Brent Janssen), we were assigned to develop an IT project for an internal client: TTC Westel, a local table tennis club in which one of our teachers is involved. In close collaboration with the client, we went through the initial phases of a software project. We created an ERD and a Use Case diagram, analyzed functional requirements, and designed a visual proof of concept using Figma. We also wrote a report detailing our findings and the steps we took to reach our conclusions.",
-                            myContribution: "My contribution to this project mainly involved helping to create the diagrams, such as the Use Case diagram and the ERD. I was also responsible for designing several pages in Figma and contributed significantly to the final report.",
+                            descriptionLong: (
+                                <>
+                                    As part of a team of six students, including myself, we were assigned to develop an IT project for an internal client: TTC Westel, a local table tennis club in which one of our teachers is involved. The goal was to gain hands-on experience with the early phases of a software project.
+                                    <br />
+                                    <br />
+                                    Working closely with the client, we conducted several meetings to understand their needs and used the Scrum methodology with daily stand-ups to manage our workflow. Throughout the project, we created an Entity Relationship Diagram (ERD), Use Case diagrams, and analyzed the functional requirements. We also designed a visual proof of concept using Figma and documented the entire process in a detailed report.
+                                </>
+                            ),
+                            myContribution: (
+                                <>
+                                    My contribution to this project mainly involved helping to create the diagrams, such as the Use Case diagram and the ERD. I was also responsible for designing several pages in Figma and contributed significantly to the final report.
+                                    <br />
+                                    <br />
+                                    Through this project, I learned how to work effectively in a team, communicate with a real client, and apply the Scrum methodology.
+                                </>
+                            ),
                             tools: ["Figma", "StarUML", "Microsoft Word", "..."],
                             numberOfContributors: 6,
                         },
@@ -106,8 +120,22 @@ export default function Work() {
                             imageUrl: "/assets/duffalo.gif",
                             link: "https://de.duffalos.be/",
                             description: "Developed a website for football club De Duffalos. Worked in a team of six using Scrum throughout the entire project lifecycle.",
-                            descriptionLong: "In the second year of my studies, during the second semester in the course Skils Integration Lab 2, we were given the assignment to create a website in a group for an internal client at Thomas More — in this case, De Duffalos. This was by far the largest group I had ever worked with on a single project, which made things a bit challenging, but we managed to deliver in the end.",
-                            myContribution: "My contribution to this project included overall code testing, creating the CRUD pages, implementing middleware for authentication, setting up and seeding the database, and more. I also worked on the documentation.",
+                            descriptionLong: (
+                                <>
+                                    During the second semester of my second year studying IT at Thomas More, I worked with six fellow students to develop a website for De Duffalos, an internal client of the school. This project was part of the course Skills Integration Lab 2 and was the largest group project I had taken on so far. 
+                                    <br />
+                                    <br />
+                                    We applied the SCRUM methodology, held regular stand-up meetings, and collaborated closely throughout the different phases of the project. In the end, we successfully delivered a functional and well-structured website for our client.
+                                </>
+                            ),
+                            myContribution: (
+                                <>
+                                    My contribution to this project included overall code testing, creating the CRUD pages, implementing middleware for authentication, setting up and seeding the database, and more. I also worked on the documentation.
+                                    <br />
+                                    <br />
+                                    Through this project, I strengthened my skills in Laravel, PHP, Blade, and Tailwind CSS. Although I already had some experience with these technologies, working on a real project in a larger team helped me deepen my understanding and apply best practices.
+                                </>
+                            ),
                             tools: ["Tailwind CSS", "Alpine.js", "Laravel", "Livewire", "Sqlite", "..."],
                             numberOfContributors: 6,
                         },
@@ -116,9 +144,18 @@ export default function Work() {
                             imageUrl: "/assets/brews.gif",
                             link: "https://brewery1itf604.netlify.app/",
                             description: "Created a fictional brewery website for Brussels Brews in a group of three, focusing on both front-end and back-end.",
-                            descriptionLong: "In the first year of my studies, during the second semester in the course Full Stack Essentials, we were given the assignment to create a website in a group for a fictional client — in this case, Brussels Brews. This was our first experience working on a website that involved both front-end and back-end development.",
-                            myContribution: "We divided the different pages among ourselves and helped each other where needed. I was responsible for the homepage, the 'How it's made' page, and the contact page.",
-                            tools: ["HTML", "CSS", "JavaScript", "PHP", "Bootstrap", "Python API"],
+                            descriptionLong: "During the second semester of my first year studying IT at Thomas More, I worked with two classmates on a project for the course Full Stack Essentials. We were tasked with designing and building a website for a fictional client Brussels Brews, a beer brewery. This was our first experience developing a full-stack website, involving both front-end and back-end work. It was a valuable introduction to combining different technologies and collaborating in a small team to bring a project from concept to completion.",
+                            myContribution: (
+                                <>
+                                    We divided the different pages among ourselves and helped each other where needed. I was responsible for the homepage, the 'How it's made' page, and the contact page.
+                                    <br />
+                                    <br />
+                                    Through this project, I built on my existing experience with HTML, CSS, JavaScript, PHP, and Bootstrap, while learning how to integrate a Python API for the first time. It was my first full-stack development project, which taught me how to connect the front end with the back end effectively.
+                                    <br />
+                                    <strong>**Note:**</strong> Azure Database connection is not running anymore, but the website is still functional.
+                                </>
+                            ),
+                            tools: ["HTML", "CSS", "JavaScript", "PHP", "Bootstrap", "Python"],
                             numberOfContributors: 3,
                         },
                         {
@@ -126,8 +163,15 @@ export default function Work() {
                             imageUrl: "/assets/IoT.gif",
                             link: "https://www.youtube.com/watch?v=Z2LBS0gXR6E",
                             description: "Built a smart bridge system in a group of three for our IoT course. The bridge opened for boats and closed for cars, based on requirements.",
-                            descriptionLong: "In the first year of my studies, during the second semester in the course IoT Essentials, we were given the assignment to create something using IoT. It had to be a project with a sufficiently large concept, so two fellow students and I came up with the idea of a bridge that uses sound sensors to detect boats passing through.",
-                            myContribution: "My contribution to this project was helping to write the Python code that controlled the opening and closing of the bridge, as well as working on the final documentation.",
+                            descriptionLong: "During the second semester of my first year at Thomas More, I worked on a group project for the IoT Essentials course. Together with two classmates, we were tasked with designing and building a project based on a set of requirements using IoT technology. We came up with the idea of a smart bridge that uses sound sensors to detect approaching boats. The bridge would automatically open for boat traffic and close again to allow land traffic to cross. It was a challenging and creative project that helped us understand how to apply sensors and automation in real-world scenarios.",
+                            myContribution: (
+                                <>
+                                    My contribution to this project was helping to write the Python code that controlled the opening and closing of the bridge, the bridge design, as well as working on the final documentation.
+                                    <br />
+                                    <br />
+                                    Through this project, I gained practical experience with Python, the Orange Pi, multithreading, and various IoT components. I learned how to work with hardware inputs and manage concurrent processes using multithreading.
+                                </>
+                            ),
                             tools: ["Python", "OrangePI", "Multithreading", "IoT Gear"],
                             numberOfContributors: 3,
                         },
