@@ -42,7 +42,7 @@ export default function About() {
                             }}
                         >
                             <img
-                                src="/assets/placeholder.png"
+                                src="/assets/Thomas_De_Clerck_Portrait.jpg"
                                 alt="about"
                                 className="w-full h-full object-cover rounded-2xl"
                             />
