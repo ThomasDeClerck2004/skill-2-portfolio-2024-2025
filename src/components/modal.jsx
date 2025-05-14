@@ -1,7 +1,8 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
+import ReactDOM from 'react-dom';
 
 export default function Modal({ project, onClose }) {
+    // Prevent background scroll
     useEffect(() => {
         document.body.classList.add('overflow-hidden');
         return () => {
@@ -9,9 +10,15 @@ export default function Modal({ project, onClose }) {
         };
     }, []);
 
-    return (
-        <div className="fixed inset-0 bg-transparent flex justify-center items-center z-50 pointer-events-none backdrop-blur-md">            
-            <div className="bg-[#1a1a1a] border-2 border-[#009b5f] rounded-lg p-8 w-4/5 max-w-5xl pointer-events-auto relative mx-auto my-auto sm:w-full sm:p-4 sm:mx-4">                
+    const modalContent = (
+        <div
+            className="fixed inset-0 bg-transparent flex justify-center items-center z-[9999] pointer-events-auto backdrop-blur-md"
+            onClick={onClose} // Clicking the overlay closes the modal
+        >            
+            <div
+                className="bg-[#1a1a1a] border-2 border-[#009b5f] rounded-lg p-8 w-4/5 max-w-5xl pointer-events-auto relative mx-auto my-auto sm:w-full sm:p-4 sm:mx-4"
+                onClick={(e) => e.stopPropagation()} // Prevents modal clicks from closing
+            >                   
                 {/* Header with close button */}
                 <div className="flex justify-between items-start mb-4">
                     <h2 className="inline-flex text-3xl font-bold text-white bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500">
@@ -29,16 +36,16 @@ export default function Modal({ project, onClose }) {
                         aria-label="Close modal"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path
-                            fillRule="evenodd"
-                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                            clipRule="evenodd"
-                        />
+                            <path
+                                fillRule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clipRule="evenodd"
+                            />
                         </svg>
                     </button>
                 </div>
 
-                {/* Project image with overlay gradient */}
+                {/* Project image */}
                 <div className="relative rounded-lg overflow-hidden mb-6 group">
                     <img
                         src={project.imageUrl || "/placeholder.svg"}
@@ -49,21 +56,21 @@ export default function Modal({ project, onClose }) {
                 </div>
 
                 <div className='space-y-6'>
-                    {/* Project description */}
+                    {/* Description */}
                     <p className="text-gray-300 text-lg mb-6 sm:text-sm sm:break-words">{project.descriptionLong}</p>
 
-                    {/* Context section */}
+                    {/* Contribution */}
                     <div className="bg-[#2c2b2b] shadow-2xl rounded-lg p-4 border-l-4 border-emerald-500">
                         <h3 className="text-lg font-semibold text-white mb-2">My Contribution & What I Learned</h3>
                         <p className="text-gray-300 text-sm">{project.myContribution}</p>
                     </div>
 
-                    {/* Tools section */}
+                    {/* Tools */}
                     <div>
                         <div className='mb-2'>
                             <h3 className="text-lg font-semibold text-white flex items-center">
-                            <span className="mr-2">Tools Used / Learned</span>
-                            <span className="h-px flex-grow bg-gradient-to-r from-emerald-500/50 to-transparent"></span>
+                                <span className="mr-2">Tools Used / Learned</span>
+                                <span className="h-px flex-grow bg-gradient-to-r from-emerald-500/50 to-transparent"></span>
                             </h3>
                         </div>
                         <div className="flex flex-wrap gap-2 mb-6">
@@ -78,7 +85,7 @@ export default function Modal({ project, onClose }) {
                         </div>
                     </div>
 
-                    {/* More Info button */}
+                    {/* More info */}
                     <div className="mt-4">
                         <a
                             href={project.link}
@@ -89,9 +96,9 @@ export default function Modal({ project, onClose }) {
                             More Info
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                                 <path
-                                fillRule="evenodd"
-                                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                                clipRule="evenodd"
+                                    fillRule="evenodd"
+                                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clipRule="evenodd"
                                 />
                             </svg>
                         </a>
@@ -100,4 +107,6 @@ export default function Modal({ project, onClose }) {
             </div>
         </div>
     );
+
+    return ReactDOM.createPortal(modalContent, document.body);
 }
