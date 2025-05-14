@@ -16,23 +16,24 @@ export default function Modal({ project, onClose }) {
             onClick={onClose} // Clicking the overlay closes the modal
         >            
             <div
-                className="bg-[#1a1a1a] border-2 border-[#009b5f] rounded-lg p-8 w-4/5 max-w-5xl pointer-events-auto relative mx-auto my-auto sm:w-full sm:p-4 sm:mx-4"
+                className="bg-[#1a1a1a] border-2 border-[#009b5f] rounded-lg p-8 w-4/5 max-w-5xl pointer-events-auto relative mx-auto my-auto sm:w-full sm:p-4 sm:mx-4
+                max-h-[100vh] overflow-y-auto"
                 onClick={(e) => e.stopPropagation()} // Prevents modal clicks from closing
-            >                   
+            >         
                 {/* Header with close button */}
                 <div className="flex justify-between items-start mb-4">
                     <h2 className="inline-flex text-3xl font-bold text-white bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500">
-                        <div className='flex items-center pt-1 mr-2'>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="flex items-end h-8 w-8 text-[#009b5f]" fill="currentColor" viewBox="0 0 24 24">
+                        <div className='hidden sm:flex items-center pt-1 mr-2'>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="items-end h-8 w-8 text-[#009b5f]" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                             </svg>
-                            <p className='flex justify-center items-center ml-1 text-xl'>{project.numberOfContributors}</p>
+                            <p className='justify-center items-center ml-1 text-xl'>{project.numberOfContributors}</p>
                         </div>
-                        - {project.name}
+                        <span className='hidden sm:inline-block pr-2'>-</span> {project.name}
                     </h2>
                     <button
                         onClick={onClose}
-                        className="flex justify-center items-center w-10 h-10 rounded-full bg-[#2c2b2b] hover:bg-[#353535] text-gray-400 hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer"
+                        className="flex justify-center items-center w-10 h-10 min-w-10 min-h-10 aspect-square rounded-full bg-[#2c2b2b] hover:bg-[#353535] text-gray-400 hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer"
                         aria-label="Close modal"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -46,7 +47,7 @@ export default function Modal({ project, onClose }) {
                 </div>
 
                 {/* Project image */}
-                <div className="relative rounded-lg overflow-hidden mb-6 group">
+                <div className="hidden sm:block relative rounded-lg overflow-hidden mb-6 group">
                     <img
                         src={project.imageUrl || "/placeholder.svg"}
                         alt={project.name}

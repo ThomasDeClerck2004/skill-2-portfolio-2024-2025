@@ -41,7 +41,7 @@ export default function ProjectCard({ projectName, imageUrl, description, contai
                 <p className="text-gray-300 text-sm mt-2">{description}</p>
                 <button
                     onClick={onView}
-                    className="hidden sm:block bg-[#009b5f] hover:bg-[#01b872] font-bold text-white py-2 px-4 rounded-lg transition duration-300 ease-in-out absolute bottom-4 right-4 cursor-pointer"
+                    className="bg-[#009b5f] hover:bg-[#01b872] font-bold text-white py-2 px-4 rounded-lg transition duration-300 ease-in-out absolute bottom-4 right-4 cursor-pointer"
                 >
                     View
                 </button>
