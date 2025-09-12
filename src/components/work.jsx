@@ -175,6 +175,20 @@ export default function Work() {
                             tools: ["Python", "OrangePI", "Multithreading", "IoT Gear"],
                             numberOfContributors: 3,
                         },
+                        {
+                            name: "Shushify",
+                            imageUrl: "/assets/shushify.jpg",
+                            link: "https://github.com/ThomasDeClerck2004/Shushify",
+                            description: "A small automation script that mutes Spotify ads by detecting when an advertisement is playing and restores the volume afterwards.",
+                            descriptionLong: "I created a lightweight script to make listening to Spotify more enjoyable without constant interruptions. The script automatically detects when Spotify starts playing an advertisement, mutes the system volume of Spotify, and then restores the sound back to its original level once the ad is finished. This way, I can continue enjoying my music seamlessly without being disturbed by ads. The project demonstrates my ability to identify everyday annoyances and solve them with practical programming solutions.",
+                            myContribution: (
+                                <>
+                                    I independently built this project from scratch, making full use of the Spotify Developer API and several Python libraries. To ensure accessibility, I also created a clear README with a step by step guide, so that anyone can set up and use the script easily.
+                                </>
+                            ),
+                            tools: ["Python", "API usage"],
+                            numberOfContributors: 1,
+                        },
                     ]}
                 />
             </div>

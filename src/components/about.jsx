@@ -69,11 +69,11 @@ export default function About() {
                         <div className='flex flex-col mt-4 text-white'>
                             <div className='flex flex-row items-center gap-1 mb-3'>
                                 <img src="/assets/gmail.png" alt="about" className="w-6 h-6 mr-2" />
-                                <p>Email: <a href='mailto:thomas.de.clerck4@gmail.com' className='underline underline-offset-4 decoration-[#009b5f] hover:text-[#009b5f] transition duration-300 ease-in-out'>thomas.de.clerck4@gmail.com</a></p>
+                                <p>Email: <a href='mailto:thomas.seth.de.clerck@gmail.com' className='underline underline-offset-4 decoration-[#009b5f] hover:text-[#009b5f] transition duration-300 ease-in-out'>thomas.seth.de.clerck@gmail.com</a></p>
                             </div>
                             <div className='flex flex-row items-center gap-1 mb-3'>
                                 <img src="/assets/github.png" alt="about" className="w-6 h-6 mr-2" />
-                                <p>Github: <a href='https://github.com/ThomasDeClerck2004' target='_blank' className='underline underline-offset-4 decoration-[#009b5f] hover:text-[#009b5f] transition duration-300 ease-in-out'>ThomasDeClerck2004</a> & <a href='https://github.com/Thomas997' target='_blank' className='underline underline-offset-4 decoration-[#009b5f] hover:text-[#009b5f] transition duration-300 ease-in-out'>Thomas997</a></p>
+                                <p>Github: <a href='https://github.com/ThomasDeClerck2004' target='_blank' className='underline underline-offset-4 decoration-[#009b5f] hover:text-[#009b5f] transition duration-300 ease-in-out'>ThomasDeClerck2004</a></p>
                             </div>
                             <div className='flex flex-row items-center gap-1 mb-3'>
                                 <img src="/assets/linkedin.png" alt="about" className="w-6 h-6 mr-2" />
